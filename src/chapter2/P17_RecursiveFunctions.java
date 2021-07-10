@@ -10,7 +10,8 @@ public class P17_RecursiveFunctions {
         System.out.println("---------------------");
         int n= 20;
         System.out.println(n + "-й член последовательности Фибоначчи: " + fibonachi(n));
-        System.out.println(fibonacci(20));
+        fibonacci(20);
+        fibonacci(20);
 
     }
 
@@ -51,6 +52,7 @@ public class P17_RecursiveFunctions {
             result=prev+next;
             prev=next;
             next=result;
+            System.out.print(result + " ");
         }
         return result;
     }
@@ -64,5 +66,4 @@ public class P17_RecursiveFunctions {
     С каждым разом он становился все хуже по Фибоначчи(n),
     поэтому сложность экспоненциальна.
      */
-
 }
