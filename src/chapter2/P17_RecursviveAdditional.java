@@ -1,6 +1,6 @@
 package chapter2;
 
-public class P17_Recursvive_Additional {
+public class P17_RecursviveAdditional {
     // Output = 0 1 1 2 3 5 8 13
 
     static int fibMemo[];
