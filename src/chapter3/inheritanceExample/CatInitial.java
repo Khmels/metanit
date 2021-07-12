@@ -11,6 +11,10 @@ public class CatInitial extends AnimalInit{
         System.out.println("Отработал конструктор Cat!");
     }
 
+    public CatInitial(String brain, String heart) {
+        super(brain, heart);
+    }
+
     public CatInitial(String brain, String heart, String tail) {
         super(brain, heart);
         System.out.println("Конструктор класса Cat начал работу (конструктор Animal уже был выполнен)");
