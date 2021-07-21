@@ -10,7 +10,18 @@ import java.util.stream.Stream;
 
 public class P1_CollectionTypes {
 
+    public static void main(String[] args) {
+        OwnCollection ownCollection = new OwnCollection();
 
+        // Diamond operator is not applicable for non-parameterized types
+        // Collection<Integer> ownCollection2 = new OwnCollection<>();
+
+        Collection<Integer> ownCollection2 = new OwnCollection();
+
+        System.out.println(ownCollection.isEmpty());
+        // Result of 'ownCollection2.isEmpty()' is always 'true'
+        System.out.println(ownCollection2.isEmpty()); // true
+    }
 }
 
 class OwnCollection implements Collection {
@@ -26,7 +37,7 @@ class OwnCollection implements Collection {
     // возвращает true, если коллекция пуста, иначе возвращает false
     @Override
     public boolean isEmpty() {
-        return false;
+        return true;
     }
 
     // boolean contains (Object item):
