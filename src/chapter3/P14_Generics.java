@@ -1,12 +1,14 @@
 package chapter3;
 
+import java.util.List;
+
 public class P14_Generics {
     // Обобщения
     // Обобщения или generics (обобщенные типы и методы) позволяют нам уйти от жесткого определения используемых типов.
 
     public static void main(String[] args) {
         Account acc = new Account(2334, 5000); // id - число
-        int acc1Id = (int)acc.getId();
+        int acc1Id = (int) acc.getId();
         System.out.println(acc1Id);
 
         AccountObjectID accountObjectID1 = new AccountObjectID(1234, 10000);        // id - число
@@ -39,11 +41,10 @@ public class P14_Generics {
         // --- Обобщенные интерфейсы ---
 
         // При реализации интерфейса - конкретный тип
-        Accountable<String> accImpTypeInterface1= new AccountImp("1234rwr", 5000);
+        Accountable<String> accImpTypeInterface1 = new AccountImp("1234rwr", 5000);
         AccountImp accImpTypeClass1 = new AccountImp("1235", 4300);
         System.out.println(accImpTypeInterface1.getId());
         System.out.println(accImpTypeClass1.getId());
-
 
 
         // Параметр остаестя в классе
@@ -52,13 +53,13 @@ public class P14_Generics {
         Accountable<String> accImpTypeInterface2 = new AccountImpGeneric<>("2373rwr", 5000);
 
         // Raw use of parameterized class 'AccountImpGeneric'
-                // * A raw type is a name for a generic interface or class without its type argument:
+        // * A raw type is a name for a generic interface or class without its type argument:
         // Unchecked assignment: 'chapter3.AccountImpGeneric' to 'chapter3.AccountImpGeneric<java.lang.String>'
         // Unchecked call to 'AccountImpGeneric(T, int)' as a member of raw type 'chapter3.AccountImpGeneric'
         AccountImpGeneric<String> accountImpGeneric = new AccountImpGeneric("23345", 7000);
 
         // реализованный классб но с другим параметром
-        AccountImpGeneric<Integer> accountImpGeneric2 = new AccountImpGeneric<>(3345,9000);
+        AccountImpGeneric<Integer> accountImpGeneric2 = new AccountImpGeneric<>(3345, 9000);
 
         System.out.println(accImpTypeInterface2.getId());
         System.out.println(accImpTypeClass2.getId());
@@ -86,8 +87,8 @@ public class P14_Generics {
         System.out.println(("--- Использование нескольких универсальных параметров ---"));
         // --- Использование нескольких универсальных параметров ---
 
-        AccountMoreGenerics<String,Integer> accountMoreGenerics = new AccountMoreGenerics<>("First", 2);
-        System.out.println(accountMoreGenerics.getId() + ", " +  accountMoreGenerics.getSum());
+        AccountMoreGenerics<String, Integer> accountMoreGenerics = new AccountMoreGenerics<>("First", 2);
+        System.out.println(accountMoreGenerics.getId() + ", " + accountMoreGenerics.getSum());
 
         AccountMoreGenerics<String, Double> accountMoreGenerics2 = new AccountMoreGenerics<String, Double>("354", 5000.87);
         String id = accountMoreGenerics2.getId();
@@ -102,11 +103,24 @@ public class P14_Generics {
         System.out.println(accountGenericConstructor.getId());
         System.out.println(accountGenericConstructor2.getId());
 
-
-
-
     }
 
+    // --- Wild card ---
+        /*
+        ? знак вопроса представляет знак подстановки или wildcard, фактически он обозначает неизвестный тип.
+        ? extends BaseType - может использоваться любой тип, который представляет BaseType и его наследников.
+        ? super DerivedType - обратная ситуация - любой тип, который представляет DerivedType или его родительские классы.
+        */
+    //Отличия в использовании. Например, функция sum
+
+    public static void sum(List<? extends Number> list) {
+        double result = 0.0;
+        for (Number n : list)
+        result+= n.doubleValue();
+        System.out.println(result);
+    }
+    // функция принимает список объектов, которые представляют числа - Number или производные классы типа Integer.
+    // Но в данном случае нельзя написать public static void sum (List<T extends E>){ //......}
 }
 
 class Account{
