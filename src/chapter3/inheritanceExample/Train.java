@@ -6,14 +6,16 @@ public class Train {
     double length;
 
     // protected +, public +, default +, private -
-    protected Train() {
-    }
+    // protected - виден из другого пакета
 
-    public Train(String name, int id, double length) {
-        this.name = name;
-        this.id = id;
-        this.length = length;
-    }
+//    Train() {
+//    }
+//
+//    public Train(String name, int id, double length) {
+//        this.name = name;
+//        this.id = id;
+//        this.length = length;
+//    }
 
     public void displayTrainInfo(){
         System.out.println("Название: "+ name + ", номер: " + id + ", длина: " + length);

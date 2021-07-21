@@ -11,6 +11,5 @@ public class Program {
 
         Train train = new Train();
         train.displayTrainInfo();
-
     }
 }
