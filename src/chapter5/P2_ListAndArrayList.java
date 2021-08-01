@@ -13,7 +13,7 @@ public class P2_ListAndArrayList {
         //  ArrayList (int capacity):                 создает список, который имеет начальную емкость capacity
 
         //`java doc`
-        // public class ArrayList<E> extends AbstractList<E>
+        //### public class ArrayList<E> extends AbstractList<E>
 
         ArrayList<String> people = new ArrayList<String>();
         int capacity=10;
