@@ -48,20 +48,20 @@ public class P5_Set_HasHSet {
         System.out.println("---------------------");
 
         // хеш-таблица объектов Person
-        HashSet<Ch5_PersonArray> people = new HashSet<Ch5_PersonArray>();
-        people.add(new Ch5_PersonArray("Mike"));
-        people.add(new Ch5_PersonArray("Tom"));
+        HashSet<Ch5_Person_public> people = new HashSet<Ch5_Person_public>();
+        people.add(new Ch5_Person_public("Mike"));
+        people.add(new Ch5_Person_public("Tom"));
         // у класса Ch5_PersonArray не переопределен метод equals. Добавляется новый объект в коллекцию
-        people.add(new Ch5_PersonArray("Tom"));
-        people.add(new Ch5_PersonArray("Nick"));
-        people.add(new Ch5_PersonArray("Bob"));
+        people.add(new Ch5_Person_public("Tom"));
+        people.add(new Ch5_Person_public("Nick"));
+        people.add(new Ch5_Person_public("Bob"));
         System.out.printf("Set contains %d elements \n", people.size());    //
 
 
         // проверка через ссылки
-        Ch5_PersonArray bob1 = new Ch5_PersonArray("Bob");
-        Ch5_PersonArray bob2 = new Ch5_PersonArray("Bobby");
-        Ch5_PersonArray bob3 = new Ch5_PersonArray( "undefined");
+        Ch5_Person_public bob1 = new Ch5_Person_public("Bob");
+        Ch5_Person_public bob2 = new Ch5_Person_public("Bobby");
+        Ch5_Person_public bob3 = new Ch5_Person_public( "undefined");
         bob3 = bob2;
 
         people.add(bob1);
@@ -70,13 +70,13 @@ public class P5_Set_HasHSet {
 
         System.out.printf("Set contains %d elements \n", people.size());
 
-        System.out.printf("New objects      %s <=> %s\n", new Ch5_PersonArray("Bobby").hashCode(), new Ch5_PersonArray("Bobby").hashCode());
-        System.out.printf("Created earlier  %s <=> %s\n", new Ch5_PersonArray("Bobby").hashCode(), bob2.hashCode());
+        System.out.printf("New objects      %s <=> %s\n", new Ch5_Person_public("Bobby").hashCode(), new Ch5_Person_public("Bobby").hashCode());
+        System.out.printf("Created earlier  %s <=> %s\n", new Ch5_Person_public("Bobby").hashCode(), bob2.hashCode());
         System.out.printf("Same object      %s <=> %s\n", bob2.hashCode(), bob3.hashCode());         // равен
         System.out.printf("Two strings      %s <=> %s\n", "Bobby".hashCode(), "Bobby".hashCode());   // равен
         System.out.println();
 
-        for(Ch5_PersonArray p : people){
+        for(Ch5_Person_public p : people){
 
             System.out.println(p.getName());
         }

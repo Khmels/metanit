@@ -16,8 +16,6 @@ public class P3_Queue_ArrayDeque {
 
     public static void main(String[] args) {
 
-
-
         ArrayDeque<String> states = new ArrayDeque<String>();
         // стандартное добавление элементов
         states.add("Germany");
@@ -44,12 +42,12 @@ public class P3_Queue_ArrayDeque {
         System.out.println("---------------------");
 
         // очередь из объектов Person
-        ArrayDeque<Ch5_PersonArray> people = new ArrayDeque<Ch5_PersonArray>();
-        people.addFirst(new Ch5_PersonArray("Tom"));
-        people.addLast(new Ch5_PersonArray("Nick"));
+        ArrayDeque<Ch5_Person_public> people = new ArrayDeque<Ch5_Person_public>();
+        people.addFirst(new Ch5_Person_public("Tom"));
+        people.addLast(new Ch5_Person_public("Nick"));
 
         // перебор без извлечения
-        for(Ch5_PersonArray p : people){
+        for(Ch5_Person_public p : people){
 
             System.out.println(p.getName());
         }

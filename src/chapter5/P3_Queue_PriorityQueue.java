@@ -87,12 +87,12 @@ public class P3_Queue_PriorityQueue {
 
 
             // очередь из объектов Person
-            PriorityQueue<Ch5_PersonArray> people = new PriorityQueue<Ch5_PersonArray>();
-            people.add(new Ch5_PersonArray("Tom"));
-            people.add(new Ch5_PersonArray("Will"));
-            people.add(new Ch5_PersonArray("John"));
-            people.add(new Ch5_PersonArray("Nick"));
-            people.add(new Ch5_PersonArray("Albert"));
+            PriorityQueue<Ch5_Person_public> people = new PriorityQueue<Ch5_Person_public>();
+            people.add(new Ch5_Person_public("Tom"));
+            people.add(new Ch5_Person_public("Will"));
+            people.add(new Ch5_Person_public("John"));
+            people.add(new Ch5_Person_public("Nick"));
+            people.add(new Ch5_Person_public("Albert"));
 
             System.out.println("---------------------");
 
@@ -103,14 +103,14 @@ public class P3_Queue_PriorityQueue {
 
             /// java.lang.ClassCastException: class chapter5.Ch5_PersonArray cannot be cast to class java.lang.Comparable
             // перебор без извлечения
-            for(Ch5_PersonArray p : people) {
+            for(Ch5_Person_public p : people) {
                 System.out.println(p.getName());
             }
 
             System.out.println("-----INSERTION DUPLICATES----------------");
 
             int size = people.size();
-            people.add(new Ch5_PersonArray("Albert"));
+            people.add(new Ch5_Person_public("Albert"));
             int newSize = people.size();
 
 
@@ -120,7 +120,7 @@ public class P3_Queue_PriorityQueue {
             else{
                 System.out.println("---- dup DENIED ---");
             }
-            for(Ch5_PersonArray p : people) {
+            for(Ch5_Person_public p : people) {
                 System.out.println(p.getName());
             }
             System.out.printf("Queue size: %d \n", people.size());  // 6
@@ -138,7 +138,7 @@ public class P3_Queue_PriorityQueue {
                 e.getMessage();
             }
 
-            for(Ch5_PersonArray p : people) {
+            for(Ch5_Person_public p : people) {
                 System.out.println(p.getName());
             }
             System.out.printf("Queue size: %d \n", people.size());  // 6

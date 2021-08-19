@@ -1,16 +1,16 @@
 package chapter5;
 
-public class Ch5_PersonArray implements Comparable<Ch5_PersonArray>{
+public class Ch5_Person_public implements Comparable<Ch5_Person_public>{
 
     private String name;
-    public Ch5_PersonArray(String value){
+    public Ch5_Person_public(String value){
 
         name=value;
     }
     String getName(){return name;}
 
     @Override
-    public int compareTo(Ch5_PersonArray o) {
+    public int compareTo(Ch5_Person_public o) {
         return this.name.compareTo(o.getName());
     }
 
@@ -21,4 +21,3 @@ public class Ch5_PersonArray implements Comparable<Ch5_PersonArray>{
                 '}';
     }
 }
-

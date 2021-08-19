@@ -40,17 +40,17 @@ public class P4_List_LinkedList {
         states.removeFirst(); // удаление первого элемента
         states.removeLast(); // удаление последнего элемента
 
-        LinkedList<Ch5_PersonArray> people = new LinkedList<Ch5_PersonArray>();
-        people.add(new Ch5_PersonArray("Mike"));
-        people.addFirst(new Ch5_PersonArray("Tom"));
-        people.addLast(new Ch5_PersonArray("Nick"));
+        LinkedList<Ch5_Person_public> people = new LinkedList<Ch5_Person_public>();
+        people.add(new Ch5_Person_public("Mike"));
+        people.addFirst(new Ch5_Person_public("Tom"));
+        people.addLast(new Ch5_Person_public("Nick"));
         people.remove(1); // удаление второго элемента
 
-        for(Ch5_PersonArray p : people){
+        for(Ch5_Person_public p : people){
 
             System.out.println(p.getName());
         }
-        Ch5_PersonArray first = people.getFirst();
+        Ch5_Person_public first = people.getFirst();
         System.out.println(first.getName()); // вывод первого элемента
 
         Verify<LinkedList> verify = new Verify<>();
