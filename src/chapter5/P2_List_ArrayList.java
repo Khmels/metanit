@@ -3,17 +3,18 @@ package chapter5;
 import java.util.ArrayList;
 import java.util.List;
 
-public class P2_ListAndArrayList {
+public class P2_List_ArrayList {
+
+    //`java doc`
+    //### public class ArrayList<E> extends AbstractList<E> {}
+
+    /*  ArrayList constructors // конструкторы :
+            ArrayList():                              создает пустой список
+            ArrayList (Collection <? extends E> col): создает список, в который добавляются все элементы коллекции col.
+            ArrayList (int capacity):                 создает список, который имеет начальную емкость capacity
+    */
 
     public static void main(String[] args) {
-
-        //  ArrayList имеет следующие конструкторы:
-        //  ArrayList():                              создает пустой список
-        //  ArrayList(Collection <? extends E> col):  создает список, в который добавляются все элементы коллекции col.
-        //  ArrayList (int capacity):                 создает список, который имеет начальную емкость capacity
-
-        //`java doc`
-        //### public class ArrayList<E> extends AbstractList<E>
 
         ArrayList<String> people = new ArrayList<String>();
         int capacity=10;
@@ -29,7 +30,7 @@ public class P2_ListAndArrayList {
         subList.add("5");
 
         //`java doc`
-        // public interface List<E> extends Collection<E>
+        //### public interface List<E> extends Collection<E>
 
         List<String> subList2 = subList.subList(0,2);
         for (String s: subList2) {
@@ -54,7 +55,7 @@ public class P2_ListAndArrayList {
         people.add("Sam");
         people.add(1, "Bob"); // добавляем элемент по индексу 1
 
-        System.out.println(people.get(1));// получаем 2-й объект
+        System.out.println(people.get(1)); // получаем 2-й объект
         System.out.println("---------------------");
 
 
@@ -68,6 +69,7 @@ public class P2_ListAndArrayList {
         }
 
         System.out.println("---------------------");
+
         // проверяем наличие элемента
         if(people.contains("Tom")){
 
@@ -79,10 +81,17 @@ public class P2_ListAndArrayList {
         // удаление по индексу
         people.remove(0);
 
+        System.out.printf("ArrayList has %d elements \n", people.size());
         Object[] peopleArray = people.toArray();
         for(Object person : peopleArray){
             System.out.println(person);
         }
+
+        System.out.println();
+
+        Verify<ArrayList> verify = new Verify<ArrayList>();
+        verify.checkCollection(people);
+
     }
 
 }

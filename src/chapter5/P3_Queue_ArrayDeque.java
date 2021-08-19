@@ -1,16 +1,72 @@
 package chapter5;
 
 import java.util.ArrayDeque;
-import java.util.Deque;
-import java.util.Queue;
 
-public class P3_QueueAndArrayDeque {
-    // FIFO (first in - first out).
-    // То есть чем раньше был добавлен элемент в коллекцию, тем раньше он из нее удаляется.
-    // Это стандартная модель однонаправленной очереди.
+public class P3_Queue_ArrayDeque {
 
     //`java doc`
-    //###public interface Queue<E> extends Collection<E>
+    //### public class ArrayDeque<E> extends AbstractCollection<E>
+    //                               implements Deque<E>, Cloneable, Serializable
+
+    /*  ArrayDeque constructors // конструкторы:
+            ArrayDeque():                               создает пустую очередь
+            ArrayDeque(Collection<? extends E> col):    создает очередь, наполненную элементами из коллекции col
+            ArrayDeque(int capacity):                   создает очередь с начальной емкостью capacity.
+    */
+
+    public static void main(String[] args) {
+
+
+
+        ArrayDeque<String> states = new ArrayDeque<String>();
+        // стандартное добавление элементов
+        states.add("Germany");
+        states.addFirst("France");      // добавляем элемент в самое начало
+        states.push("Great Britain");   // добавляем элемент в самое начало
+        states.addLast("Spain");        // добавляем элемент в конец коллекции
+        states.add("Italy");
+
+        // получаем первый элемент без удаления
+        String sFirst = states.getFirst();
+        System.out.println(sFirst);     // Great Britain
+        // получаем последний элемент без удаления
+        String sLast = states.getLast();
+        System.out.println(sLast);      // Italy
+
+        System.out.printf("--- Queue size: %d --- \n", states.size());  // 5
+
+        // перебор коллекции
+        while(states.peek()!=null){
+            // извлечение c начала
+            System.out.println(states.pop());
+        }
+
+        System.out.println("---------------------");
+
+        // очередь из объектов Person
+        ArrayDeque<Ch5_PersonArray> people = new ArrayDeque<Ch5_PersonArray>();
+        people.addFirst(new Ch5_PersonArray("Tom"));
+        people.addLast(new Ch5_PersonArray("Nick"));
+
+        // перебор без извлечения
+        for(Ch5_PersonArray p : people){
+
+            System.out.println(p.getName());
+        }
+
+        Verify<ArrayDeque> verify = new Verify<>();
+        verify.checkCollection(people);
+    }
+}
+
+/*
+    FIFO (first in - first out).
+    То есть чем раньше был добавлен элемент в коллекцию, тем раньше он из нее удаляется.
+    Это стандартная модель однонаправленной очереди.
+*/
+
+//`java doc`
+//### public interface Queue<E> extends Collection<E> {}
 
     /*
     E element():            возвращает, но не удаляет, элемент из начала очереди.
@@ -25,8 +81,8 @@ public class P3_QueueAndArrayDeque {
                                 Если очередь пуста, генерирует исключение NoSuchElementException
      */
 
-    //`java doc`
-    //### public interface Deque<E> extends Queue<E>
+//`java doc`
+//### public interface Deque<E> extends Queue<E>
 
     /*
     void addFirst(E obj):   добавляет элемент в начало очереди
@@ -49,6 +105,7 @@ public class P3_QueueAndArrayDeque {
     E pop():                возвращает с удалением элемент из начала очереди.
                                 Если очередь пуста, генерирует исключение NoSuchElementException
     void push(E element):   добавляет элемент в самое начало очереди
+
     E removeFirst():        возвращает с удалением элемент из начала очереди.
                                 Если очередь пуста, генерирует исключение NoSuchElementException
     E removeLast():         возвращает с удалением элемент из конца очереди.
@@ -64,53 +121,3 @@ public class P3_QueueAndArrayDeque {
     что делает классы, применяющие данный интерфейс, довольно гибкими.
      */
 
-    public static void main(String[] args) {
-
-        //`java doc`
-        //### public class ArrayDeque<E> extends AbstractCollection<E>
-        //                           implements Deque<E>, Cloneable, Serializable
-
-        ArrayDeque<String> states = new ArrayDeque<String>();
-        // стандартное добавление элементов
-        states.add("Germany");
-        states.addFirst("France");      // добавляем элемент в самое начало
-        states.push("Great Britain");   // добавляем элемент в самое начало
-        states.addLast("Spain");        // добавляем элемент в конец коллекции
-        states.add("Italy");
-
-        // получаем первый элемент без удаления
-        String sFirst = states.getFirst();
-        System.out.println(sFirst);     // Great Britain
-        // получаем последний элемент без удаления
-        String sLast = states.getLast();
-        System.out.println(sLast);      // Italy
-
-        System.out.printf("Queue size: %d \n", states.size());  // 5
-
-        // перебор коллекции
-        while(states.peek()!=null){
-            // извлечение c начала
-            System.out.println(states.pop());
-        }
-
-        // очередь из объектов Person
-        ArrayDeque<PersonArray> people = new ArrayDeque<PersonArray>();
-        people.addFirst(new PersonArray("Tom"));
-        people.addLast(new PersonArray("Nick"));
-
-        // перебор без извлечения
-        for(PersonArray p : people){
-
-            System.out.println(p.getName());
-        }
-    }
-}
-class PersonArray{
-
-    private String name;
-    public PersonArray(String value){
-
-        name=value;
-    }
-    String getName(){return name;}
-}
