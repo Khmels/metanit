@@ -14,7 +14,7 @@ public class P8_Map_HashMap {
     //                              implements Map<K,V>, Cloneable, Serializable {
 
 
-    /* HashMap<K,V> constructors // конструкторы:
+    /* HashMap constructors // конструкторы:
             HashMap(int initialCapacity, float loadF):  создает стандартный HashMap по умолчанию
             HashMap(int initialCapacity):               инициализирует емкость хэш-карты для заданного capacity.
             HashMap() :                                 создает дерево, в которое добавляет эл. сортированного набора set

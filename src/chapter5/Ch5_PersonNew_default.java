@@ -2,7 +2,8 @@ package chapter5;
 
 class Ch5_PersonNew_default implements Comparable<Ch5_PersonNew_default>{
     private String name;
-    private int age;
+    //private int age;
+    private Integer age;
     private long id; // ordered
 
     public Ch5_PersonNew_default(String name, int age, long id) {
@@ -60,9 +61,26 @@ class Ch5_PersonNew_default implements Comparable<Ch5_PersonNew_default>{
     }
 
     @Override
-    public int compareTo(Ch5_PersonNew_default p) {
-        return name.compareTo(p.getName());
+    public int compareTo(Ch5_PersonNew_default that) {
+
+        //return name.compareTo(p.getName());
         //return name.length()-p.getName().length(); // например, по длине имени
+
+        /*
+        Например, для объектов класса User мы задаем сортировку по имени, а в случае равенства имен – по возрасту.
+        Объекты будут располагаться в естественном порядке (по мере увеличения значения).
+         */
+        //используем метод compareTo из класса String для сравнения имен
+        int result = this.name.compareTo(that.name);
+
+        //если имена одинаковые -  сравниваем возраст,
+        //используя метод compareTo из класса Integer
+
+        if (result == 0) {
+            result = this.age.compareTo(that.age);
+        }
+        return result;
+        // как альтернатива thenComparing из Comparator
     }
     // Интерфейс Comparable содержит один единственный метод int compareTo(E item),
     // который сравнивает текущий объект с объектом, переданным в качестве параметра.

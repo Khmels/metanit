@@ -16,9 +16,11 @@ public class P7_Compare {
         Ch5_PersonNew_default person = new Ch5_PersonNew_default("Jack");
         Ch5_PersonNew_default personAge = new Ch5_PersonNew_default(25);
         personAge.setName("Tom");
+        person.setAge(20);
 
         Ch5_PersonNew_default personId = new Ch5_PersonNew_default(1L);
         personId.setName("Alfred");
+        personId.setAge(30);
 
         //tree.add(new Ch5_PersonNew()); // java.lang.NullPointerException - нет имени
         tree.add(person);
@@ -63,7 +65,6 @@ public class P7_Compare {
         //последовательное сравнение
         // class java.util.Comparator$$Lambda$14/0x000000084006f840 cannot be cast to class chapter5.Ch5_PersonNameLengthComparator
         // Ch5_PersonNameLengthComparator comparatorNameAndAge = (Ch5_PersonNameLengthComparator) new Ch5_PersonNameLengthComparator().thenComparing(new Ch5_PersonAgeComparator());
-        //Comparator<Person> pcomp = new PersonNameComparator().thenComparing(new PersonAgeComparator());
 
         Comparator<Ch5_PersonNew_default> comparatorNameAndAge = new Ch5_PersonNameLengthComparator().thenComparing(new Ch5_PersonAgeComparator());
 

@@ -15,7 +15,6 @@ public class P4_List_LinkedList {
     public static void main(String[] args) {
 
         LinkedList<String> states = new LinkedList<String>();
-
         // добавим в список ряд элементов
         states.add("Germany");
         states.add("France");

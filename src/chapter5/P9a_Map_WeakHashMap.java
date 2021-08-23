@@ -10,11 +10,13 @@ public class P9a_Map_WeakHashMap {
     //                                  implements Map<K,V> {
 
     /* WeakHashMap constructors // конструкторы
-        WeakHashMap(int initialCapacity, float loadFactor):
-        WeakHashMap(int initialCapacity)
-        WeakHashMap()
-        WeakHashMap(Map<? extends K, ? extends V> m)
-
+        WeakHashMap(int initialCapacity, float loadFactor):     empty, with the given initial capacity and the given load factor.
+        WeakHashMap(int initialCapacity):                       empty, with the given initial capacity and the default load factor (0.75)
+        WeakHashMap():                                          empty, with the default initial capacity (16) and load factor (0.75)
+        WeakHashMap(Map<? extends K, ? extends V> m):           with the same mappings as the specified map.
+                                                                The WeakHashMap is created with the default load factor (0.75)
+                                                                and an initial capacity sufficient to hold the
+                                                                mappings in the specified map
      */
 
     // betacode.net/13583/java-weakhashmap
