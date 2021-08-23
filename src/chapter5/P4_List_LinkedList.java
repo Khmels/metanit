@@ -53,8 +53,8 @@ public class P4_List_LinkedList {
         Ch5_Person_public first = people.getFirst();
         System.out.println(first.getName()); // вывод первого элемента
 
-        Verify<LinkedList> verify = new Verify<>();
-        verify.checkCollection(people);
+        VerifyCollection<LinkedList> verifyCollection = new VerifyCollection<>();
+        verifyCollection.checkCollection(people);
     }
 }
 

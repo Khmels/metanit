@@ -1,13 +1,12 @@
 package chapter5;
 
-import java.util.AbstractSet;
 import java.util.NavigableSet;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 public class P6_Set_TreeSet {
 
-    // `java doc`
+    //`java doc`
     //### public class TreeSet<E> extends AbstractSet<E>
     //                            implements NavigableSet<E>, Cloneable, java.io.Serializable
 
@@ -67,6 +66,8 @@ public class P6_Set_TreeSet {
 
         // возвращаем набор в обратном порядке
         NavigableSet<String> navSet = states.descendingSet();
+        // нету такого метода
+        // TreeSet<String> descSet = states.descendingSet();
 
         // возвращаем набор в котором все элементы меньше текущего
         SortedSet<String> setLower=states.headSet("Great Britain");     // невключительно
@@ -77,8 +78,8 @@ public class P6_Set_TreeSet {
         System.out.println("Меньше текущего: " + setLower);
         System.out.println("Больше текущего: " + setGreater);
 
-        Verify<TreeSet> verifyTreeSet = new Verify<>();
-        verifyTreeSet.checkCollection(states);
+        VerifyCollection<TreeSet> verifyCollection = new VerifyCollection<>();
+        verifyCollection.checkCollection(states);
     }
 }
 

@@ -17,7 +17,7 @@ class Ch5_PersonNameLengthComparator implements Comparator<Ch5_PersonNew_default
     }
 }
 
-//с JDK 8 в механизм работы компараторов были внесены некоторые дополнения.
+// с JDK 8 в механизм работы компараторов были внесены некоторые дополнения.
 // В частности, теперь можно применять сразу несколько компараторов по принципу приоритета.
 
 class Ch5_PersonAgeComparator implements Comparator<Ch5_PersonNew_default>{

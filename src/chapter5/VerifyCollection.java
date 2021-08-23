@@ -2,7 +2,7 @@ package chapter5;
 
 import java.util.Collection;
 
-public class Verify<T extends Collection> {
+public class VerifyCollection<T extends Collection> {
     public T collection;
 
     public void checkCollection(T collection ){
@@ -24,6 +24,7 @@ public class Verify<T extends Collection> {
 
         System.out.println("-----INSERTION NULL----------------------");
         try{
+            size = collection.size();
             collection.add(null);
             newSize = collection.size();
             System.out.println("---- null ALLOWED ---   , size: " + size + ", new size: " + newSize);

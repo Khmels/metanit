@@ -44,6 +44,7 @@ public class P3_Queue_ArrayDeque {
         // очередь из объектов Person
         ArrayDeque<Ch5_Person_public> people = new ArrayDeque<Ch5_Person_public>();
         people.addFirst(new Ch5_Person_public("Tom"));
+        people.add(new Ch5_Person_public("Nick"));
         people.addLast(new Ch5_Person_public("Nick"));
 
         // перебор без извлечения
@@ -52,8 +53,8 @@ public class P3_Queue_ArrayDeque {
             System.out.println(p.getName());
         }
 
-        Verify<ArrayDeque> verify = new Verify<>();
-        verify.checkCollection(people);
+        VerifyCollection<ArrayDeque> verifyCollection = new VerifyCollection<>();
+        verifyCollection.checkCollection(people);
     }
 }
 

@@ -2,7 +2,7 @@ package chapter5;
 
 import java.util.HashSet;
 
-public class P5_Set_HasHSet {
+public class P5_Set_HashSet {
 
     //`java doc`
     //### public class HashSet<E> extends AbstractSet<E>
@@ -82,8 +82,8 @@ public class P5_Set_HasHSet {
         }
 
         // тк в проверке коппируется тот же объект, то добавление заново не происходит
-        Verify<HashSet> verify =new Verify<>();
-        verify.checkCollection(people);
+        VerifyCollection<HashSet> verifyCollection =new VerifyCollection<>();
+        verifyCollection.checkCollection(people);
     }
 }
 

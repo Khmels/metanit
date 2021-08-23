@@ -2,7 +2,7 @@ package chapter5;
 
 import java.util.PriorityQueue;
 
-public class P3_Queue_PriorityQueue {
+public class P3a_Queue_PriorityQueue {
 
     //`java doc`
     //### public class PriorityQueue<E> extends AbstractQueue<E>
@@ -143,8 +143,8 @@ public class P3_Queue_PriorityQueue {
             }
             System.out.printf("Queue size: %d \n", people.size());  // 6
 
-            Verify<PriorityQueue> verify = new Verify<>();
-            verify.checkCollection(people);
+            VerifyCollection<PriorityQueue> verifyCollection = new VerifyCollection<>();
+            verifyCollection.checkCollection(people);
 
 
             System.out.println();

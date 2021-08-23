@@ -87,7 +87,5 @@ public class P7_Compare {
             System.out.println(eachPerson.toString());
         }
 
-
-
     }
 }
