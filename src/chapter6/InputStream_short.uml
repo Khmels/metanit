@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.io.InputStream</OriginalElement>
+  <nodes>
+    <node x="5354.187451737451" y="820.0">java.util.zip.GZIPInputStream</node>
+    <node x="8806.18745173745" y="718.0">java.io.BufferedInputStream</node>
+    <node x="4958.187451737451" y="718.0">java.io.PushbackInputStream</node>
+    <node x="7894.187451737451" y="536.0">java.lang.ProcessBuilder.NullInputStream</node>
+    <node x="3801.25" y="536.0">com.sun.media.sound.ModelByteBuffer.RandomFileInputStream</node>
+    <node x="8382.18745173745" y="536.0">javafx.embed.swing.DataFlavorUtils.ByteBufferInputStream</node>
+    <node x="5820.187451737451" y="536.0">java.util.Base64.DecInputStream</node>
+    <node x="5136.187451737451" y="922.0">com.sun.org.apache.bcel.internal.util.ByteSequence.ByteArrayStream</node>
+    <node x="3941.929804804805" y="718.0">sun.awt.windows.WDropTargetContextPeerFileStream</node>
+    <node x="6850.187451737451" y="718.0">sun.net.httpserver.LeftOverInputStream</node>
+    <node x="4281.25" y="536.0">jdk.jfr.internal.ChunkInputStream</node>
+    <node x="3277.25" y="536.0">java.io.PipedInputStream</node>
+    <node x="2777.25" y="536.0">java.util.zip.ZipFile.ZipFileInputStream</node>
+    <node x="8150.187451737451" y="922.0">sun.security.krb5.internal.ktab.KeyTabInputStream</node>
+    <node x="3468.25" y="718.0">java.io.FileInputStream.AltFinalizer</node>
+    <node x="630.75" y="820.0">jdk.internal.jline.console.internal.ConsoleReaderInputStream.ConsoleEnumeration</node>
+    <node x="8854.18745173745" y="536.0">com.sun.media.sound.RIFFReader</node>
+    <node x="1180.25" y="718.0">javax.sound.sampled.AudioInputStream.TargetDataLineInputStream</node>
+    <node x="4477.25" y="536.0">sun.nio.ch.ChannelInputStream</node>
+    <node x="36.25" y="718.0">java.io.ObjectInputStream.PeekInputStream</node>
+    <node x="4037.25" y="536.0">com.sun.media.sound.ModelByteBufferWavetable.Buffer8PlusInputStream</node>
+    <node x="5460.187451737451" y="536.0">java.util.jar.JarVerifier.VerifierStream</node>
+    <node x="3661.25" y="536.0">sun.awt.windows.HTMLCodec</node>
+    <node x="2214.0833333333335" y="922.0">com.sun.org.apache.bcel.internal.classfile.Signature.MyByteArrayInputStream</node>
+    <node x="2034.0833333333335" y="922.0">sun.security.util.DerInputBuffer</node>
+    <node x="6458.187451737451" y="718.0">sun.net.www.protocol.jar.JarURLConnection.JarURLInputStream</node>
+    <node x="1856.25" y="718.0">com.sun.media.sound.SoftJitterCorrector</node>
+    <node x="4481.25" y="718.0">sun.nio.ch.SocketAdaptor.SocketInputStream</node>
+    <node x="8618.18745173745" y="718.0">java.util.jar.Manifest.FastInputStream</node>
+    <node x="7714.187451737451" y="820.0">sun.net.www.http.KeepAliveStream</node>
+    <node x="8122.187451737451" y="718.0">java.util.zip.DeflaterInputStream</node>
+    <node x="7290.187451737451" y="536.0">jdk.internal.net.http.ResponseSubscribers.HttpResponseInputStream</node>
+    <node x="2989.25" y="536.0">com.sun.glass.ui.win.HTMLCodec</node>
+    <node x="9270.18745173745" y="718.0">sun.net.www.protocol.ftp.FtpURLConnection.FtpInputStream</node>
+    <node x="9986.18745173745" y="536.0">com.sun.javafx.iio.png.PNGIDATChunkInputStream</node>
+    <node x="8354.18745173745" y="922.0">sun.security.krb5.internal.ccache.CCacheInputStream</node>
+    <node x="8082.187451737451" y="536.0">com.sun.webkit.SimpleSharedBufferInputStream</node>
+    <node x="6968.187451737451" y="820.0">sun.net.httpserver.ChunkedInputStream</node>
+    <node x="2888.429804804805" y="718.0">java.net.SocketInputStream</node>
+    <node x="5366.187451737451" y="718.0">java.security.DigestInputStream</node>
+    <node x="7510.187451737451" y="718.0">java.util.zip.CheckedInputStream</node>
+    <node x="2265.25" y="536.0">com.sun.imageio.plugins.common.InputStreamAdapter</node>
+    <node x="7894.187451737451" y="718.0">sun.net.www.content.text.PlainTextInputStream</node>
+    <node x="0.0" y="536.0">java.io.ObjectInputStream</node>
+    <node x="2727.979118404118" y="0.0">java.lang.AutoCloseable</node>
+    <node x="5994.187451737451" y="718.0">java.io.LineNumberInputStream</node>
+    <node x="6596.187451737451" y="536.0">com.sun.jndi.ldap.sasl.SaslInputStream</node>
+    <node x="6662.187451737451" y="718.0">sun.net.www.protocol.http.HttpURLConnection.HttpInputStream</node>
+    <node x="2150.75" y="820.0">java.io.ByteArrayInputStream</node>
+    <node x="2076.25" y="718.0">com.sun.media.sound.AlawCodec.AlawCodecStream</node>
+    <node x="1642.855759330756" y="536.0">javax.sound.sampled.AudioInputStream</node>
+    <node x="5640.187451737451" y="536.0">sun.security.ssl.SSLSocketImpl.AppInputStream</node>
+    <node x="2477.25" y="536.0">sun.awt.windows.WDropTargetContextPeerIStream</node>
+    <node x="9026.18745173745" y="820.0">com.sun.java.util.jar.pack.PackageReader.LimitedBuffer</node>
+    <node x="7738.187451737451" y="536.0">sun.net.httpserver.SSLStreams.InputStream</node>
+    <node x="1636.25" y="718.0">com.sun.media.sound.PCMtoPCMCodec.PCMtoPCMCodecStream</node>
+    <node x="224.25" y="718.0">java.io.ObjectInputStream.BlockDataInputStream</node>
+    <node x="9026.18745173745" y="718.0">sun.net.www.http.HttpCaptureInputStream</node>
+    <node x="546.75" y="718.0">jdk.internal.jline.console.internal.ConsoleReaderInputStream</node>
+    <node x="6000.187451737451" y="536.0">sun.java2d.cmm.ProfileDeferralInfo</node>
+    <node x="6220.187451737451" y="536.0">sun.rmi.log.LogInputStream</node>
+    <node x="5178.187451737451" y="718.0">java.io.DataInputStream</node>
+    <node x="1281.2355641355607" y="820.0">com.sun.media.sound.SoftJitterCorrector.JitterStream</node>
+    <node x="6149.187451737451" y="820.0">java.util.zip.ZipInputStream</node>
+    <node x="8806.18745173745" y="820.0">com.sun.javafx.runtime.async.AbstractRemoteResource.ProgressInputStream</node>
+    <node x="6724.187451737451" y="820.0">sun.net.httpserver.FixedLengthInputStream</node>
+    <node x="5542.187451737451" y="820.0">java.util.zip.ZipFile.ZipFileInflaterInputStream</node>
+    <node x="5570.187451737451" y="718.0">java.util.zip.InflaterInputStream</node>
+    <node x="6230.187451737451" y="718.0">sun.awt.image.PNGFilterInputStream</node>
+    <node x="5052.187451737451" y="536.0">java.io.StringBufferInputStream</node>
+    <node x="8342.18745173745" y="718.0">javax.swing.ProgressMonitorInputStream</node>
+    <node x="4954.187451737451" y="820.0">com.sun.webkit.network.DirectoryURLConnection.DirectoryInputStream</node>
+    <node x="386.75" y="820.0">jdk.internal.jline.console.internal.ConsoleReaderInputStream.ConsoleLineInputStream</node>
+    <node x="786.75" y="536.0">sun.security.jgss.krb5.CipherHelper.WrapTokenInputStream</node>
+    <node x="3129.25" y="536.0">sun.net.httpserver.Request.ReadStream</node>
+    <node x="5790.187451737451" y="718.0">javax.crypto.CipherInputStream</node>
+    <node x="6784.187451737451" y="536.0">sun.net.www.http.ChunkedInputStream</node>
+    <node x="7086.187451737451" y="536.0">java.io.FilterInputStream</node>
+    <node x="8248.18745173745" y="820.0">sun.security.krb5.internal.util.KrbDataInputStream</node>
+    <node x="5190.187451737451" y="820.0">com.sun.org.apache.bcel.internal.util.ByteSequence</node>
+    <node x="6400.187451737451" y="536.0">jdk.nio.zipfs.ZipFileSystem.EntryInputStream</node>
+    <node x="1015.75" y="536.0">sun.awt.datatransfer.DataTransferer.ReencodingInputStream</node>
+    <node x="7306.187451737451" y="718.0">sun.net.TelnetInputStream</node>
+    <node x="1893.535564135561" y="536.0">com.sun.media.sound.SunFileWriter.NoCloseInputStream</node>
+    <node x="9190.18745173745" y="536.0">jdk.internal.jline.internal.NonBlockingInputStream</node>
+    <node x="5304.187451737451" y="536.0">sun.net.www.protocol.http.HttpURLConnection.ErrorStream</node>
+    <node x="6149.187451737451" y="922.0">java.util.jar.JarInputStream</node>
+    <node x="9002.18745173745" y="536.0">com.sun.media.sound.SoftSynthesizer.WeakAudioStream</node>
+    <node x="9630.18745173745" y="536.0">com.sun.media.sound.AudioFloatFormatConverter.AudioFloatFormatConverterInputStream</node>
+    <node x="3632.25" y="718.0">java.lang.Process.PipeInputStream</node>
+    <node x="8618.18745173745" y="536.0">com.sun.org.apache.xerces.internal.impl.XMLEntityManager.RewindableInputStream</node>
+    <node x="566.75" y="536.0">java.io.SequenceInputStream</node>
+    <node x="7070.187451737451" y="718.0">sun.security.provider.FileInputStreamPool.UnclosableInputStream</node>
+    <node x="1448.25" y="718.0">com.sun.media.sound.UlawCodec.UlawCodecStream</node>
+    <node x="3473.25" y="536.0">java.io.FileInputStream</node>
+    <node x="9434.18745173745" y="536.0">sun.tools.attach.VirtualMachineImpl.PipedInputStream</node>
+    <node x="7722.187451737451" y="718.0">sun.net.www.MeteredStream</node>
+    <node x="7542.187451737451" y="536.0">sun.net.www.protocol.http.EmptyInputStream</node>
+    <node x="4992.187451737451" y="102.0">java.io.Closeable</node>
+    <node x="4984.187451737451" y="204.0">java.io.InputStream</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="sun.net.www.content.text.PlainTextInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7998.187451737451" y="668.0" />
+      <point x="7213.23507078507" y="668.0" />
+      <point x="35.047619047619264" y="26.0" />
+    </edge>
+    <edge source="sun.security.provider.FileInputStreamPool.UnclosableInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream" target="java.io.InputStream">
+      <point x="46.0" y="-26.0" />
+      <point x="138.0" y="286.0" />
+      <point x="4985.604118404118" y="286.0" />
+      <point x="-66.58333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.security.krb5.internal.util.KrbDataInputStream" target="java.io.BufferedInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8344.18745173745" y="795.0" />
+      <point x="8839.520785070785" y="795.0" />
+      <point x="-66.66666666666606" y="26.0" />
+    </edge>
+    <edge source="javax.crypto.CipherInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5882.187451737451" y="648.0" />
+      <point x="7125.616023166022" y="648.0" />
+      <point x="-52.57142857142844" y="26.0" />
+    </edge>
+    <edge source="sun.security.krb5.internal.ccache.CCacheInputStream" target="sun.security.krb5.internal.util.KrbDataInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8446.18745173745" y="902.0" />
+      <point x="8392.18745173745" y="902.0" />
+      <point x="48.0" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.console.internal.ConsoleReaderInputStream.ConsoleLineInputStream" target="java.io.InputStream">
+      <point x="-56.0" y="-26.0" />
+      <point x="442.75" y="316.0" />
+      <point x="4994.104118404118" y="316.0" />
+      <point x="-58.08333333333303" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream" target="java.lang.AutoCloseable">
+      <point x="-46.0" y="-26.0" />
+      <point x="46.0" y="77.0" />
+      <point x="2765.979118404118" y="77.0" />
+      <point x="-38.0" y="26.0" />
+    </edge>
+    <edge source="sun.security.util.DerInputBuffer" target="java.io.ByteArrayInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2114.0833333333335" y="902.0" />
+      <point x="2185.4166666666665" y="902.0" />
+      <point x="-69.33333333333348" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.protocol.http.HttpURLConnection.ErrorStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5372.187451737451" y="496.0" />
+      <point x="5056.437451737451" y="496.0" />
+      <point x="4.25" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.ZipInputStream" target="java.util.zip.InflaterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6229.187451737451" y="795.0" />
+      <point x="5736.854118404118" y="795.0" />
+      <point x="66.66666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.XMLEntityManager.RewindableInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8726.18745173745" y="336.0" />
+      <point x="5101.770785070784" y="336.0" />
+      <point x="49.58333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.awt.windows.WDropTargetContextPeerIStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2617.25" y="416.0" />
+      <point x="5022.437451737451" y="416.0" />
+      <point x="-29.75" y="26.0" />
+    </edge>
+    <edge source="java.io.FileInputStream.AltFinalizer" target="java.io.FileInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3540.25" y="698.0" />
+      <point x="3536.25" y="698.0" />
+      <point x="-21.0" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.protocol.http.HttpURLConnection.HttpInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6746.187451737451" y="688.0" />
+      <point x="7160.663642213642" y="688.0" />
+      <point x="-17.523809523809177" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.MeteredStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7798.187451737451" y="678.0" />
+      <point x="7204.4731660231655" y="678.0" />
+      <point x="26.285714285714675" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.protocol.ftp.FtpURLConnection.FtpInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9350.18745173745" y="608.0" />
+      <point x="7265.8064993564985" y="608.0" />
+      <point x="87.6190476190477" y="26.0" />
+    </edge>
+    <edge source="sun.nio.ch.ChannelInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="4573.25" y="516.0" />
+      <point x="5050.770785070784" y="516.0" />
+      <point x="-1.4166666666669698" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.AlawCodec.AlawCodecStream" target="javax.sound.sampled.AudioInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2160.25" y="688.0" />
+      <point x="1801.255759330756" y="688.0" />
+      <point x="70.40000000000009" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.ZipFile.ZipFileInflaterInputStream" target="java.util.zip.InflaterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.internal.NonBlockingInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9302.18745173745" y="306.0" />
+      <point x="5110.270785070784" y="306.0" />
+      <point x="58.08333333333303" y="26.0" />
+    </edge>
+    <edge source="java.util.Base64.DecInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5900.187451737451" y="466.0" />
+      <point x="5064.937451737451" y="466.0" />
+      <point x="12.75" y="26.0" />
+    </edge>
+    <edge source="sun.net.httpserver.FixedLengthInputStream" target="sun.net.httpserver.LeftOverInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6836.187451737451" y="795.0" />
+      <point x="6900.187451737451" y="795.0" />
+      <point x="-50.0" y="26.0" />
+    </edge>
+    <edge source="javax.sound.sampled.AudioInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1730.855759330756" y="376.0" />
+      <point x="5011.104118404118" y="376.0" />
+      <point x="-41.08333333333303" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.RIFFReader" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8918.18745173745" y="326.0" />
+      <point x="5104.604118404118" y="326.0" />
+      <point x="52.41666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.javafx.iio.png.PNGIDATChunkInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="10102.18745173745" y="276.0" />
+      <point x="5118.770785070784" y="276.0" />
+      <point x="66.58333333333303" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.SunFileWriter.NoCloseInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1989.535564135561" y="386.0" />
+      <point x="5013.937451737451" y="386.0" />
+      <point x="-38.25" y="26.0" />
+    </edge>
+    <edge source="sun.awt.windows.WDropTargetContextPeerFileStream" target="java.io.FileInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="4093.929804804805" y="688.0" />
+      <point x="3620.25" y="688.0" />
+      <point x="63.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.glass.ui.win.HTMLCodec" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3049.25" y="436.0" />
+      <point x="5028.104118404118" y="436.0" />
+      <point x="-24.08333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.rmi.log.LogInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6300.187451737451" y="446.0" />
+      <point x="5070.604118404118" y="446.0" />
+      <point x="18.41666666666697" y="26.0" />
+    </edge>
+    <edge source="java.security.DigestInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5458.187451737451" y="628.0" />
+      <point x="7108.092213642212" y="628.0" />
+      <point x="-70.09523809523853" y="26.0" />
+    </edge>
+    <edge source="jdk.nio.zipfs.ZipFileSystem.EntryInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6488.187451737451" y="436.0" />
+      <point x="5073.437451737451" y="436.0" />
+      <point x="21.25" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.bcel.internal.util.ByteSequence" target="java.io.DataInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.PipedInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3365.25" y="456.0" />
+      <point x="5033.770785070784" y="456.0" />
+      <point x="-18.41666666666697" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.console.internal.ConsoleReaderInputStream" target="java.io.SequenceInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.FileInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3557.25" y="466.0" />
+      <point x="5036.604118404118" y="466.0" />
+      <point x="-15.58333333333303" y="26.0" />
+    </edge>
+    <edge source="java.net.SocketInputStream" target="java.io.FileInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2980.429804804805" y="698.0" />
+      <point x="3494.25" y="698.0" />
+      <point x="-63.0" y="26.0" />
+    </edge>
+    <edge source="java.io.BufferedInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8906.18745173745" y="628.0" />
+      <point x="7248.282689832689" y="628.0" />
+      <point x="70.09523809523853" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.console.internal.ConsoleReaderInputStream.ConsoleEnumeration" target="jdk.internal.jline.console.internal.ConsoleReaderInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="60.0" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.DeflaterInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8222.18745173745" y="658.0" />
+      <point x="7221.996975546975" y="658.0" />
+      <point x="43.80952380952385" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.SoftJitterCorrector.JitterStream" target="java.io.InputStream">
+      <point x="-36.0" y="-26.0" />
+      <point x="1317.2355641355607" y="795.0" />
+      <point x="1005.25" y="795.0" />
+      <point x="1005.25" y="346.0" />
+      <point x="5002.604118404118" y="346.0" />
+      <point x="-49.58333333333303" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.ModelByteBufferWavetable.Buffer8PlusInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="4149.25" y="496.0" />
+      <point x="5045.104118404118" y="496.0" />
+      <point x="-7.08333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.security.ssl.SSLSocketImpl.AppInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5720.187451737451" y="476.0" />
+      <point x="5062.104118404118" y="476.0" />
+      <point x="9.91666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.SoftJitterCorrector" target="javax.sound.sampled.AudioInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1956.25" y="698.0" />
+      <point x="1766.0557593307558" y="698.0" />
+      <point x="35.200000000000045" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.http.HttpCaptureInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9138.18745173745" y="618.0" />
+      <point x="7257.044594594594" y="618.0" />
+      <point x="78.85714285714312" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.net.http.ResponseSubscribers.HttpResponseInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7406.187451737451" y="396.0" />
+      <point x="5084.770785070784" y="396.0" />
+      <point x="32.58333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.http.ChunkedInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6880.187451737451" y="416.0" />
+      <point x="5079.104118404118" y="416.0" />
+      <point x="26.91666666666697" y="26.0" />
+    </edge>
+    <edge source="java.lang.ProcessBuilder.NullInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7978.187451737451" y="366.0" />
+      <point x="5093.270785070784" y="366.0" />
+      <point x="41.08333333333303" y="26.0" />
+    </edge>
+    <edge source="java.io.DataInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5262.187451737451" y="618.0" />
+      <point x="7099.330308880308" y="618.0" />
+      <point x="-78.85714285714312" y="26.0" />
+    </edge>
+    <edge source="javax.sound.sampled.AudioInputStream.TargetDataLineInputStream" target="javax.sound.sampled.AudioInputStream">
+      <point x="62.0" y="-26.0" />
+      <point x="1366.25" y="688.0" />
+      <point x="1660.4557593307559" y="688.0" />
+      <point x="-70.40000000000009" y="26.0" />
+    </edge>
+    <edge source="com.sun.imageio.plugins.common.InputStreamAdapter" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2361.25" y="406.0" />
+      <point x="5019.604118404118" y="406.0" />
+      <point x="-32.58333333333303" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.ModelByteBuffer.RandomFileInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3909.25" y="486.0" />
+      <point x="5042.270785070784" y="486.0" />
+      <point x="-9.91666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.jndi.ldap.sasl.SaslInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6680.187451737451" y="426.0" />
+      <point x="5076.270785070784" y="426.0" />
+      <point x="24.08333333333303" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.ZipFile.ZipFileInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2873.25" y="426.0" />
+      <point x="5025.270785070784" y="426.0" />
+      <point x="-26.91666666666697" y="26.0" />
+    </edge>
+    <edge source="sun.java2d.cmm.ProfileDeferralInfo" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6100.187451737451" y="456.0" />
+      <point x="5067.770785070784" y="456.0" />
+      <point x="15.58333333333303" y="26.0" />
+    </edge>
+    <edge source="java.io.LineNumberInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6102.187451737451" y="658.0" />
+      <point x="7134.377927927927" y="658.0" />
+      <point x="-43.80952380952385" y="26.0" />
+    </edge>
+    <edge source="java.util.jar.Manifest.FastInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8702.18745173745" y="638.0" />
+      <point x="7239.520785070784" y="638.0" />
+      <point x="61.33333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.net.httpserver.SSLStreams.InputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7806.187451737451" y="376.0" />
+      <point x="5090.437451737451" y="376.0" />
+      <point x="38.25" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.protocol.http.EmptyInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7630.187451737451" y="386.0" />
+      <point x="5087.604118404118" y="386.0" />
+      <point x="35.41666666666697" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream.BlockDataInputStream" target="java.io.InputStream">
+      <point x="52.0" y="-26.0" />
+      <point x="380.25" y="306.0" />
+      <point x="4991.270785070784" y="306.0" />
+      <point x="-60.91666666666697" y="26.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-26.0" />
+      <point x="5052.187451737451" y="77.0" />
+      <point x="2841.979118404118" y="77.0" />
+      <point x="38.0" y="26.0" />
+    </edge>
+    <edge source="java.util.jar.JarVerifier.VerifierStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5540.187451737451" y="486.0" />
+      <point x="5059.270785070784" y="486.0" />
+      <point x="7.08333333333303" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.PCMtoPCMCodec.PCMtoPCMCodecStream" target="javax.sound.sampled.AudioInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1736.25" y="698.0" />
+      <point x="1730.855759330756" y="698.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="sun.awt.datatransfer.DataTransferer.ReencodingInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1123.75" y="356.0" />
+      <point x="5005.437451737451" y="356.0" />
+      <point x="-46.75" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream.PeekInputStream" target="java.io.ObjectInputStream">
+      <point x="-42.0" y="-26.0" />
+      <point x="78.25" y="698.0" />
+      <point x="46.0" y="698.0" />
+      <point x="-46.0" y="26.0" />
+    </edge>
+    <edge source="java.io.FilterInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7178.187451737451" y="406.0" />
+      <point x="5081.937451737451" y="406.0" />
+      <point x="29.75" y="26.0" />
+    </edge>
+    <edge source="javafx.embed.swing.DataFlavorUtils.ByteBufferInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8490.18745173745" y="346.0" />
+      <point x="5098.937451737451" y="346.0" />
+      <point x="46.75" y="26.0" />
+    </edge>
+    <edge source="com.sun.webkit.network.DirectoryURLConnection.DirectoryInputStream" target="java.io.PushbackInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.protocol.jar.JarURLConnection.JarURLInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6550.187451737451" y="678.0" />
+      <point x="7151.901737451736" y="678.0" />
+      <point x="-26.285714285714675" y="26.0" />
+    </edge>
+    <edge source="jdk.jfr.internal.ChunkInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="4369.25" y="506.0" />
+      <point x="5047.937451737451" y="506.0" />
+      <point x="-4.25" y="26.0" />
+    </edge>
+    <edge source="java.util.jar.JarInputStream" target="java.util.zip.ZipInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream.PeekInputStream" target="java.io.InputStream">
+      <point x="42.0" y="-26.0" />
+      <point x="162.25" y="698.0" />
+      <point x="194.5" y="698.0" />
+      <point x="194.5" y="296.0" />
+      <point x="4988.437451737451" y="296.0" />
+      <point x="-63.75" y="26.0" />
+    </edge>
+    <edge source="java.lang.Process.PipeInputStream" target="java.io.FileInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3716.25" y="698.0" />
+      <point x="3578.25" y="698.0" />
+      <point x="21.0" y="26.0" />
+    </edge>
+    <edge source="sun.tools.attach.VirtualMachineImpl.PipedInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9522.18745173745" y="296.0" />
+      <point x="5113.104118404118" y="296.0" />
+      <point x="60.91666666666697" y="26.0" />
+    </edge>
+    <edge source="sun.security.jgss.krb5.CipherHelper.WrapTokenInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="890.75" y="336.0" />
+      <point x="4999.770785070784" y="336.0" />
+      <point x="-52.41666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.java.util.jar.pack.PackageReader.LimitedBuffer" target="java.io.BufferedInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9102.18745173745" y="795.0" />
+      <point x="8972.854118404117" y="795.0" />
+      <point x="66.66666666666606" y="26.0" />
+    </edge>
+    <edge source="sun.net.www.http.KeepAliveStream" target="sun.net.www.MeteredStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.bcel.internal.util.ByteSequence.ByteArrayStream" target="java.io.ByteArrayInputStream">
+      <point x="-42.0" y="-26.0" />
+      <point x="5178.187451737451" y="892.0" />
+      <point x="2324.0833333333335" y="892.0" />
+      <point x="69.33333333333348" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.InflaterInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5670.187451737451" y="638.0" />
+      <point x="7116.854118404118" y="638.0" />
+      <point x="-61.33333333333303" y="26.0" />
+    </edge>
+    <edge source="sun.net.TelnetInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7398.187451737451" y="698.0" />
+      <point x="7186.949356499355" y="698.0" />
+      <point x="8.761904761904589" y="26.0" />
+    </edge>
+    <edge source="java.io.ByteArrayInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2254.75" y="396.0" />
+      <point x="5016.770785070784" y="396.0" />
+      <point x="-35.41666666666697" y="26.0" />
+    </edge>
+    <edge source="com.sun.javafx.runtime.async.AbstractRemoteResource.ProgressInputStream" target="java.io.BufferedInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.SoftSynthesizer.WeakAudioStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9086.18745173745" y="316.0" />
+      <point x="5107.437451737451" y="316.0" />
+      <point x="55.25" y="26.0" />
+    </edge>
+    <edge source="sun.nio.ch.SocketAdaptor.SocketInputStream" target="sun.nio.ch.ChannelInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="javax.swing.ProgressMonitorInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8470.18745173745" y="648.0" />
+      <point x="7230.758880308879" y="648.0" />
+      <point x="52.57142857142844" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.bcel.internal.classfile.Signature.MyByteArrayInputStream" target="java.io.ByteArrayInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="2326.0833333333335" y="902.0" />
+      <point x="2254.75" y="902.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="sun.net.httpserver.LeftOverInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6950.187451737451" y="698.0" />
+      <point x="7169.425546975546" y="698.0" />
+      <point x="-8.761904761904589" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.bcel.internal.util.ByteSequence.ByteArrayStream" target="com.sun.org.apache.bcel.internal.util.ByteSequence">
+      <point x="42.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.AudioFloatFormatConverter.AudioFloatFormatConverterInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="9798.18745173745" y="286.0" />
+      <point x="5115.937451737451" y="286.0" />
+      <point x="63.75" y="26.0" />
+    </edge>
+    <edge source="java.io.StringBufferInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5168.187451737451" y="506.0" />
+      <point x="5053.604118404118" y="506.0" />
+      <point x="1.4166666666669698" y="26.0" />
+    </edge>
+    <edge source="sun.net.httpserver.Request.ReadStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3193.25" y="446.0" />
+      <point x="5030.937451737451" y="446.0" />
+      <point x="-21.25" y="26.0" />
+    </edge>
+    <edge source="com.sun.webkit.SimpleSharedBufferInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8222.18745173745" y="356.0" />
+      <point x="5096.104118404118" y="356.0" />
+      <point x="43.91666666666697" y="26.0" />
+    </edge>
+    <edge source="sun.net.httpserver.ChunkedInputStream" target="sun.net.httpserver.LeftOverInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7064.187451737451" y="795.0" />
+      <point x="7000.187451737451" y="795.0" />
+      <point x="50.0" y="26.0" />
+    </edge>
+    <edge source="java.io.SequenceInputStream" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="666.75" y="326.0" />
+      <point x="4996.937451737451" y="326.0" />
+      <point x="-55.25" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.GZIPInputStream" target="java.util.zip.InflaterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5438.187451737451" y="795.0" />
+      <point x="5603.520785070784" y="795.0" />
+      <point x="-66.66666666666697" y="26.0" />
+    </edge>
+    <edge source="javax.sound.sampled.AudioInputStream.TargetDataLineInputStream" target="java.io.InputStream">
+      <point x="-62.0" y="-26.0" />
+      <point x="1242.25" y="366.0" />
+      <point x="5008.270785070784" y="366.0" />
+      <point x="-43.91666666666697" y="26.0" />
+    </edge>
+    <edge source="java.io.ObjectInputStream.BlockDataInputStream" target="java.io.ObjectInputStream">
+      <point x="-52.0" y="-26.0" />
+      <point x="276.25" y="688.0" />
+      <point x="138.0" y="688.0" />
+      <point x="46.0" y="26.0" />
+    </edge>
+    <edge source="java.io.PushbackInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="5058.187451737451" y="608.0" />
+      <point x="7090.568404118403" y="608.0" />
+      <point x="-87.6190476190477" y="26.0" />
+    </edge>
+    <edge source="java.io.InputStream" target="java.io.Closeable">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.console.internal.ConsoleReaderInputStream.ConsoleLineInputStream" target="jdk.internal.jline.console.internal.ConsoleReaderInputStream">
+      <point x="56.0" y="-26.0" />
+      <point x="554.75" y="795.0" />
+      <point x="606.75" y="795.0" />
+      <point x="-60.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.UlawCodec.UlawCodecStream" target="javax.sound.sampled.AudioInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="1532.25" y="698.0" />
+      <point x="1695.6557593307562" y="698.0" />
+      <point x="-35.200000000000045" y="26.0" />
+    </edge>
+    <edge source="sun.awt.windows.HTMLCodec" target="java.io.InputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="3721.25" y="476.0" />
+      <point x="5039.437451737451" y="476.0" />
+      <point x="-12.75" y="26.0" />
+    </edge>
+    <edge source="sun.security.krb5.internal.ktab.KeyTabInputStream" target="sun.security.krb5.internal.util.KrbDataInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="8242.18745173745" y="902.0" />
+      <point x="8296.18745173745" y="902.0" />
+      <point x="-48.0" y="26.0" />
+    </edge>
+    <edge source="sun.awt.image.PNGFilterInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="6334.187451737451" y="668.0" />
+      <point x="7143.139832689832" y="668.0" />
+      <point x="-35.047619047619264" y="26.0" />
+    </edge>
+    <edge source="java.util.zip.CheckedInputStream" target="java.io.FilterInputStream">
+      <point x="0.0" y="-26.0" />
+      <point x="7606.187451737451" y="688.0" />
+      <point x="7195.71126126126" y="688.0" />
+      <point x="17.523809523809177" y="26.0" />
+    </edge>
+    <edge source="com.sun.media.sound.SoftJitterCorrector.JitterStream" target="com.sun.media.sound.SoftJitterCorrector">
+      <point x="36.0" y="-26.0" />
+      <point x="1389.2355641355607" y="795.0" />
+      <point x="1956.25" y="795.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.1" x="4992.694642158247" y="665.6832575233711" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
