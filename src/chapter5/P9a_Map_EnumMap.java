@@ -84,6 +84,4 @@ public class P9a_Map_EnumMap {
 EnumMap is a Map implementation that exclusively takes Enum as its keys.
  */
 
-enum DayOfWeek {
-    MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
-}
+
