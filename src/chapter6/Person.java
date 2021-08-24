@@ -13,4 +13,9 @@ public class Person {
         this.age=a;
         this.married=m;
     }
+
+    String getName() {return name;}
+    int getAge(){ return age;}
+    double getHeight(){return height;}
+    boolean getMarried(){return married;}
 }
