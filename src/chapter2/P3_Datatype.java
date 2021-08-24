@@ -118,5 +118,19 @@ public class P3_Datatype {
                 """;
         System.out.println(text);
         */
+
+        String costForPrint = "5$";
+        System.out.println("Цена только для вас " +
+                + costForPrint.charAt(0) + costForPrint.charAt(1) + getCurrencyName(costForPrint.charAt(1)));
+
+
+
+    }
+    public static String getCurrencyName(char symbol) {
+        if (symbol == '$') {
+            return " долларов";
+        } else {
+            throw new UnsupportedOperationException("Not implemented yet");
+        }
     }
 }
