@@ -9,7 +9,7 @@ public class P7_4_RegEx {
         //  split(). В качестве параметра он может принимать регулярное выражение, которое представляет критерий разделения строки.
         String text = "FIFA will never regret it";
         String[] words = text.split("\\s*(\\s|,|!|\\.)\\s*");
-        for(String word : words){
+        for (String word : words) {
             System.out.println(word);
         }
 
@@ -33,10 +33,9 @@ public class P7_4_RegEx {
         System.out.println("---------------------");
         String input = "+12343454556";
         boolean result = input.matches("(\\+*)\\d{11}");
-        if(result){
+        if (result) {
             System.out.println("It is a phone number");
-        }
-        else{
+        } else {
             System.out.println("It is not a phone number!");
         }
         System.out.println("---------------------");
@@ -62,7 +61,7 @@ public class P7_4_RegEx {
         String input2 = "Hello";
         boolean found = Pattern.matches("Hello", input2);
 
-        if(found)
+        if (found)
             System.out.println("Найдено");
         else
             System.out.println("Не найдено");
@@ -89,7 +88,7 @@ public class P7_4_RegEx {
         Pattern pattern2 = Pattern.compile("hello", Pattern.CASE_INSENSITIVE);
         Matcher matcher2 = pattern2.matcher(input4);
         boolean foundMatch = matcher2.matches();
-        if(foundMatch)
+        if (foundMatch)
             System.out.println("Найдено");
         else
             System.out.println("Не найдено");
@@ -115,7 +114,7 @@ public class P7_4_RegEx {
         System.out.println(foundMatch2);
         System.out.println();
 
-        while(matcher3.find())
+        while (matcher3.find())
             System.out.println(matcher3.group());
 
         System.out.println("---------------------");
@@ -123,9 +122,33 @@ public class P7_4_RegEx {
         String stringIn = "Hello Java! Hello JavaScript! JavaSE 8.";
         Pattern patternIn = Pattern.compile("Jav(\\w*)");
         Matcher matcherIn = patternIn.matcher(stringIn);
-        while(matcherIn.find()){
+        while (matcherIn.find()) {
             System.out.println(matcherIn.group());
         }
+
+        System.out.println("---------------------");
+
+        //--- Замена в строке
+
+        String newStr = matcherIn.replaceAll("HTML");
+        System.out.println(newStr); // Hello HTML! Hello HTML! HTML 8.
+
+        // в классе String также имеется метод replaceAll() с подобным действием
+        String input6 = "Hello Java! Hello JavaScript! JavaSE 8.";
+        String myStr =input6.replaceAll("Java(\\w*)", "HTML");
+        System.out.println(myStr); // Hello HTML! Hello HTML! HTML 8.
+        System.out.println("---------------------");
+
+        //--- Разделение строки на лексемы
+
+        //С помощью метода String[] split(CharSequence input) класса Pattern можно разделить строку на массив подстрок по определенному разделителю.
+        String input7 = "Hello Java! Hello JavaScript! JavaSE 8.";
+        Pattern pattern4 = Pattern.compile("[ ,.!?]");
+        String[] words2 = pattern4.split(input7);
+        for(String word:words2) {
+            System.out.println(word);
+        }
+
 
         //--- Жадный режим квантификатора
         // javarush.ru/groups/posts/regulyarnye-vyrazheniya-v-java
@@ -140,10 +163,10 @@ public class P7_4_RegEx {
 
         System.out.println("---------------------");
         String text1 = "Егор Алла Александр";
-        Pattern pattern4 = Pattern.compile("А.+а");
-        Matcher matcher4 = pattern4.matcher(text1);
-        while (matcher4.find()) {
-            System.out.println(text1.substring(matcher4.start(), matcher4.end()));
+        Pattern pattern5 = Pattern.compile("А.+а");
+        Matcher matcher5 = pattern4.matcher(text1);
+        while (matcher5.find()) {
+            System.out.println(text1.substring(matcher5.start(), matcher5.end()));
         }
     }
 }
