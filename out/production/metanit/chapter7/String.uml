@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.lang.String</OriginalElement>
+  <nodes>
+    <node x="160.0" y="0.0">java.lang.CharSequence</node>
+    <node x="0.0" y="66.0">java.lang.Comparable</node>
+    <node x="111.5" y="236.0">java.lang.String</node>
+    <node x="459.0" y="67.0">java.io.Serializable</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.lang.String" target="java.lang.Comparable">
+      <point x="-125.33333333333331" y="-995.0" />
+      <point x="174.16666666666669" y="211.0" />
+      <point x="70.0" y="211.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="java.lang.String" target="java.io.Serializable">
+      <point x="125.33333333333331" y="-995.0" />
+      <point x="424.8333333333333" y="211.0" />
+      <point x="531.0" y="211.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.lang.String" target="java.lang.CharSequence">
+      <point x="0.0" y="-995.0" />
+      <point x="0.0" y="93.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.6000000000000001" x="491.62698412698387" y="247.16666666666663" />
+  <SelectedNodes>
+    <node>java.lang.String</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
