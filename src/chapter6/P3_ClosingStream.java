@@ -84,7 +84,7 @@ public class P3_ClosingStream {
         // После окончания работы в блоке try у ресурса автоматически вызывается метод close().
 
         // Если нам надо использовать несколько потоков, которые после выполнения надо закрыть,
-        // то мы можем указать объекты потоков через точку с запятой:
+        // то можно указать объекты потоков через точку с запятой:
 
         try(FileInputStream fin2=new FileInputStream("C:\\Users\\KhmelSE\\IdeaProjects\\metanit\\src\\chapter6\\notes.txt");
             FileOutputStream fos=new FileOutputStream("C:\\Users\\KhmelSE\\IdeaProjects\\metanit\\src\\chapter6\\notes_new2.txt"))

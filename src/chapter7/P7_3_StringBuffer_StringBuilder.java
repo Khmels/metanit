@@ -17,7 +17,7 @@ public class P7_3_StringBuffer_StringBuilder {
     //             implements Serializable, Comparable<StringBuilder>, CharSequence{}
 
     public static void main(String[] args) {
-        // метода capacity() мы можем получить количество символов, для которых зарезервирована память.
+        // метода capacity() можно получить количество символов, для которых зарезервирована память.
         // с помощью метода ensureCapacity() изменить минимальную емкость буфера символов:
         StringBuilder stringBuilder = new StringBuilder("Java");
         String str = "Java";
@@ -27,7 +27,7 @@ public class P7_3_StringBuffer_StringBuilder {
         System.out.println("Емкость: " + strBuffer.capacity()); // 42 - про запас
         System.out.println("Длина: " + strBuffer.length()); // 4
 
-        // Чтобы получить строку, которая хранится в StringBuffer, мы можем использовать стандартный метод toString():
+        // Чтобы получить строку, которая хранится в StringBuffer, можно использовать стандартный метод toString():
         System.out.println(strBuffer.toString()); // Java
         System.out.println("---------------------");
 
