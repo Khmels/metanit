@@ -149,6 +149,15 @@ public class P7_4_RegEx {
             System.out.println(word);
         }
 
+        // При этом все символы-разделители удаляются.
+        // Однако, данный способ разбивки не идеален: у нас остаются некоторые пробелы,
+        // которые расцениваются как лексемы, а не как разделители.
+        //
+        // Для более точной и изощренной разбивки нам следует применять элементы регулярных выражений. Так, заменим шаблон на следующий:
+
+
+        Pattern patternOnlyWords = Pattern.compile("\\s*(\\s|,|!|\\.)\\s*");
+
 
         //--- Жадный режим квантификатора
         // javarush.ru/groups/posts/regulyarnye-vyrazheniya-v-java
@@ -168,6 +177,8 @@ public class P7_4_RegEx {
         while (matcher5.find()) {
             System.out.println(text1.substring(matcher5.start(), matcher5.end()));
         }
+
+
     }
 }
 

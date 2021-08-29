@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.io.Reader</OriginalElement>
+  <nodes>
+    <node x="703.9999999999999" y="366.0">java.io.PipedReader</node>
+    <node x="1484.0" y="366.0">java.io.CharArrayReader</node>
+    <node x="1015.9999999999999" y="366.0">java.io.FilterReader</node>
+    <node x="1248.0" y="0.0">java.lang.AutoCloseable</node>
+    <node x="2344.0" y="366.0">com.sun.org.apache.xerces.internal.impl.io.UTF16Reader</node>
+    <node x="2180.0" y="366.0">com.sun.org.apache.xerces.internal.impl.io.Latin1Reader</node>
+    <node x="351.9999999999999" y="366.0">com.sun.org.apache.xerces.internal.impl.io.UTF8Reader</node>
+    <node x="2648.0" y="366.0">com.sun.org.apache.xerces.internal.impl.io.UCSReader</node>
+    <node x="1404.0" y="102.0">java.lang.Readable</node>
+    <node x="1106.0" y="468.0">com.sun.org.apache.bcel.internal.classfile.Utility.JavaReader</node>
+    <node x="1852.0" y="366.0">sun.nio.cs.StreamDecoder</node>
+    <node x="148.0" y="366.0">jdk.internal.jline.internal.InputStreamReader</node>
+    <node x="2024.0" y="366.0">jdk.internal.util.xml.impl.ReaderUTF16</node>
+    <node x="0.0" y="366.0">java.io.Console.LineReader</node>
+    <node x="859.9999999999999" y="366.0">com.sun.org.apache.xerces.internal.impl.io.ASCIIReader</node>
+    <node x="1664.0" y="468.0">java.io.LineNumberReader</node>
+    <node x="1344.0" y="204.0">java.io.Reader</node>
+    <node x="499.9999999999999" y="366.0">java.io.InputStreamReader</node>
+    <node x="2500.0" y="366.0">jdk.internal.util.xml.impl.ReaderUTF8</node>
+    <node x="1320.0" y="366.0">java.io.StringReader</node>
+    <node x="925.9999999999999" y="468.0">java.io.PushbackReader</node>
+    <node x="1264.0" y="102.0">java.io.Closeable</node>
+    <node x="1180.0" y="366.0">jdk.nashorn.api.scripting.URLReader</node>
+    <node x="1672.0" y="366.0">java.io.BufferedReader</node>
+    <node x="527.9999999999999" y="468.0">java.io.FileReader</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.sun.org.apache.bcel.internal.classfile.Utility.JavaReader" target="java.io.FilterReader">
+      <point x="0.0" y="-26.0" />
+      <point x="1170.0" y="443.0" />
+      <point x="1124.0" y="443.0" />
+      <point x="36.0" y="26.0" />
+    </edge>
+    <edge source="java.io.LineNumberReader" target="java.io.BufferedReader">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.io.UCSReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="2708.0" y="276.0" />
+      <point x="1437.1764705882351" y="276.0" />
+      <point x="45.17647058823536" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.io.ASCIIReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="927.9999999999999" y="326.0" />
+      <point x="1375.0588235294117" y="326.0" />
+      <point x="-16.94117647058829" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.jline.internal.InputStreamReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="240.0" y="286.0" />
+      <point x="1352.4705882352941" y="286.0" />
+      <point x="-39.529411764705856" y="26.0" />
+    </edge>
+    <edge source="java.io.FileReader" target="java.io.InputStreamReader">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.util.xml.impl.ReaderUTF8" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="2564.0" y="286.0" />
+      <point x="1431.5294117647059" y="286.0" />
+      <point x="39.529411764705856" y="26.0" />
+    </edge>
+    <edge source="java.io.FilterReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="1088.0" y="336.0" />
+      <point x="1380.705882352941" y="336.0" />
+      <point x="-11.294117647058783" y="26.0" />
+    </edge>
+    <edge source="java.io.PipedReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="771.9999999999999" y="316.0" />
+      <point x="1369.4117647058824" y="316.0" />
+      <point x="-22.588235294117567" y="26.0" />
+    </edge>
+    <edge source="java.io.StringReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.io.UTF16Reader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="2412.0" y="296.0" />
+      <point x="1425.8823529411766" y="296.0" />
+      <point x="33.88235294117658" y="26.0" />
+    </edge>
+    <edge source="sun.nio.cs.StreamDecoder" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="1928.0" y="326.0" />
+      <point x="1408.9411764705883" y="326.0" />
+      <point x="16.94117647058829" y="26.0" />
+    </edge>
+    <edge source="jdk.internal.util.xml.impl.ReaderUTF16" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="2092.0" y="316.0" />
+      <point x="1414.5882352941176" y="316.0" />
+      <point x="22.588235294117567" y="26.0" />
+    </edge>
+    <edge source="java.io.Console.LineReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="64.0" y="276.0" />
+      <point x="1346.8235294117644" y="276.0" />
+      <point x="-45.17647058823536" y="26.0" />
+    </edge>
+    <edge source="java.io.Reader" target="java.io.Closeable">
+      <point x="-24.0" y="-26.0" />
+      <point x="1368.0" y="179.0" />
+      <point x="1324.0" y="179.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.Reader" target="java.lang.Readable">
+      <point x="24.0" y="-26.0" />
+      <point x="1416.0" y="179.0" />
+      <point x="1460.0" y="179.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.PushbackReader" target="java.io.FilterReader">
+      <point x="0.0" y="-26.0" />
+      <point x="1005.9999999999999" y="443.0" />
+      <point x="1052.0" y="443.0" />
+      <point x="-36.0" y="26.0" />
+    </edge>
+    <edge source="jdk.nashorn.api.scripting.URLReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="1240.0" y="346.0" />
+      <point x="1386.3529411764703" y="346.0" />
+      <point x="-5.647058823529505" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.io.UTF8Reader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="415.9999999999999" y="296.0" />
+      <point x="1358.1176470588234" y="296.0" />
+      <point x="-33.88235294117658" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xerces.internal.impl.io.Latin1Reader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="2252.0" y="306.0" />
+      <point x="1420.2352941176468" y="306.0" />
+      <point x="28.235294117647072" y="26.0" />
+    </edge>
+    <edge source="java.io.CharArrayReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="1568.0" y="346.0" />
+      <point x="1397.6470588235293" y="346.0" />
+      <point x="5.647058823529505" y="26.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.BufferedReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="1752.0" y="336.0" />
+      <point x="1403.2941176470586" y="336.0" />
+      <point x="11.294117647058783" y="26.0" />
+    </edge>
+    <edge source="java.io.InputStreamReader" target="java.io.Reader">
+      <point x="0.0" y="-26.0" />
+      <point x="591.9999999999999" y="306.0" />
+      <point x="1363.7647058823527" y="306.0" />
+      <point x="-28.235294117647072" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4935437589670014" x="1384.0" y="260.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

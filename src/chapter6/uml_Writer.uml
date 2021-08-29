@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>java.io.Writer</OriginalElement>
+  <nodes>
+    <node x="0.0" y="356.0">sun.nio.cs.StreamEncoder</node>
+    <node x="172.0" y="356.0">com.sun.xml.internal.stream.writers.XMLWriter</node>
+    <node x="2396.0" y="356.0">com.sun.org.apache.xml.internal.serializer.SerializerTraceWriter</node>
+    <node x="1632.0" y="458.0">com.sun.tools.javac.processing.JavacFiler.FilerWriter</node>
+    <node x="1268.0" y="356.0">com.sun.org.apache.xml.internal.serializer.WriterToASCI</node>
+    <node x="312.0" y="356.0">com.sun.org.apache.xml.internal.serializer.ToStream.WritertoStringBuffer</node>
+    <node x="1266.0" y="0.0">java.lang.AutoCloseable</node>
+    <node x="1808.0" y="458.0">com.sun.org.apache.bcel.internal.classfile.Utility.JavaWriter</node>
+    <node x="1956.0" y="458.0">com.sun.tools.sjavac.AutoFlushWriter</node>
+    <node x="1432.0" y="356.0">java.io.OutputStreamWriter</node>
+    <node x="696.0" y="356.0">com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered</node>
+    <node x="1422.0" y="102.0">java.io.Flushable</node>
+    <node x="540.0" y="356.0">java.io.PrintWriter</node>
+    <node x="1134.0" y="102.0">java.lang.Appendable</node>
+    <node x="924.0" y="356.0">java.io.BufferedWriter</node>
+    <node x="536.0" y="458.0">javax.swing.text.html.parser.NPrintWriter</node>
+    <node x="1104.0" y="356.0">java.io.StringWriter</node>
+    <node x="1800.0" y="356.0">java.io.FilterWriter</node>
+    <node x="1464.0" y="458.0">java.io.FileWriter</node>
+    <node x="2208.0" y="356.0">java.io.CharArrayWriter</node>
+    <node x="1644.0" y="356.0">java.io.PipedWriter</node>
+    <node x="1282.0" y="102.0">java.io.Closeable</node>
+    <node x="1292.0" y="204.0">java.io.Writer</node>
+    <node x="2632.0" y="356.0">com.sun.tools.sjavac.comp.SmartWriter</node>
+    <node x="1964.0" y="356.0">com.sun.xml.internal.stream.writers.UTF8OutputStreamWriter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="java.io.Writer" target="java.io.Flushable">
+      <point x="32.0" y="-26.0" />
+      <point x="1372.0" y="179.0" />
+      <point x="1482.0" y="179.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xml.internal.serializer.WriterToASCI" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.FilterWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="1872.0" y="316.0" />
+      <point x="1359.2" y="316.0" />
+      <point x="19.200000000000045" y="26.0" />
+    </edge>
+    <edge source="java.io.CharArrayWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="2292.0" y="296.0" />
+      <point x="1372.0" y="296.0" />
+      <point x="32.0" y="26.0" />
+    </edge>
+    <edge source="sun.nio.cs.StreamEncoder" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="76.0" y="276.0" />
+      <point x="1295.2" y="276.0" />
+      <point x="-44.799999999999955" y="26.0" />
+    </edge>
+    <edge source="com.sun.tools.javac.processing.JavacFiler.FilerWriter" target="java.io.FilterWriter">
+      <point x="0.0" y="-26.0" />
+      <point x="1700.0" y="433.0" />
+      <point x="1824.0" y="433.0" />
+      <point x="-48.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.tools.sjavac.AutoFlushWriter" target="java.io.FilterWriter">
+      <point x="0.0" y="-26.0" />
+      <point x="2040.0" y="433.0" />
+      <point x="1920.0" y="433.0" />
+      <point x="48.0" y="26.0" />
+    </edge>
+    <edge source="java.io.PrintWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="608.0" y="306.0" />
+      <point x="1314.4" y="306.0" />
+      <point x="-25.59999999999991" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xml.internal.serializer.ToStream.WritertoStringBuffer" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="416.0" y="296.0" />
+      <point x="1308.0" y="296.0" />
+      <point x="-32.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xml.internal.serializer.WriterToUTF8Buffered" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="800.0" y="316.0" />
+      <point x="1320.8" y="316.0" />
+      <point x="-19.200000000000045" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.xml.internal.serializer.SerializerTraceWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="2504.0" y="286.0" />
+      <point x="1378.4" y="286.0" />
+      <point x="38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="com.sun.tools.sjavac.comp.SmartWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="2700.0" y="276.0" />
+      <point x="1384.8" y="276.0" />
+      <point x="44.799999999999955" y="26.0" />
+    </edge>
+    <edge source="java.io.BufferedWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="1004.0" y="326.0" />
+      <point x="1327.2" y="326.0" />
+      <point x="-12.799999999999955" y="26.0" />
+    </edge>
+    <edge source="java.io.OutputStreamWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="1528.0" y="336.0" />
+      <point x="1346.4" y="336.0" />
+      <point x="6.400000000000091" y="26.0" />
+    </edge>
+    <edge source="javax.swing.text.html.parser.NPrintWriter" target="java.io.PrintWriter">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.Writer" target="java.io.Closeable">
+      <point x="0.0" y="-26.0" />
+      <point x="1340.0" y="179.0" />
+      <point x="1342.0" y="179.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="com.sun.xml.internal.stream.writers.UTF8OutputStreamWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="2076.0" y="306.0" />
+      <point x="1365.6" y="306.0" />
+      <point x="25.59999999999991" y="26.0" />
+    </edge>
+    <edge source="java.io.StringWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="1176.0" y="336.0" />
+      <point x="1333.6" y="336.0" />
+      <point x="-6.400000000000091" y="26.0" />
+    </edge>
+    <edge source="com.sun.org.apache.bcel.internal.classfile.Utility.JavaWriter" target="java.io.FilterWriter">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.FileWriter" target="java.io.OutputStreamWriter">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.PipedWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="1712.0" y="326.0" />
+      <point x="1352.8" y="326.0" />
+      <point x="12.799999999999955" y="26.0" />
+    </edge>
+    <edge source="com.sun.xml.internal.stream.writers.XMLWriter" target="java.io.Writer">
+      <point x="0.0" y="-26.0" />
+      <point x="232.0" y="286.0" />
+      <point x="1301.6" y="286.0" />
+      <point x="-38.40000000000009" y="26.0" />
+    </edge>
+    <edge source="java.io.Closeable" target="java.lang.AutoCloseable">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="java.io.Writer" target="java.lang.Appendable">
+      <point x="-32.0" y="-26.0" />
+      <point x="1308.0" y="179.0" />
+      <point x="1198.0" y="179.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.4935437589670014" x="1384.0" y="255.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
