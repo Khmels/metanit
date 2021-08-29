@@ -65,7 +65,7 @@ public class P9a_Dictionary_Hashtable {
     boolean isEmpty()           Возвращает true, если словарь пустой. Возвращает false, если содержит как минимум один ключ.
     Enumeration keys():         Возвращает перечисление ключей, содержащихся в словаре.
     Object put(Object key, Object value): Вставляет ключ и его значение в словарь.
-                                Возвращает ноль, если ключ ещё не находится в словаре, возвращает значение,
+                                Возвращает ноль, если ключ еще не находится в словаре, возвращает значение,
                                 связанное с ключом, если ключ уже в словаре.
 	Object remove(Object key):  Удаляет ключ и его значение. Возвращает значение, связанное с ключом.
 	                            Если ключ не находится в словаре, возвращается ноль.
@@ -74,7 +74,7 @@ public class P9a_Dictionary_Hashtable {
 
 /*
     Интерфейс Enumeration –     определяет методы, с помощью которых можно перечислить элементы в коллекции объектов.
-                                Этот устаревший интерфейс был заменён Iterator.
+                                Этот устаревший интерфейс был заменен Iterator.
 
     The main difference between Iterator and Enumeration is removal of the element while traversing the collection.
     Iterator can remove the element during traversal of collection as it has remove() method.

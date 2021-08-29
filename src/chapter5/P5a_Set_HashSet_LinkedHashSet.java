@@ -21,7 +21,7 @@ public class P5a_Set_HashSet_LinkedHashSet {
      */
 
     public static void main(String args[]) {
-        // Создаём хэш-набор
+        // Создаем хэш-набор
         // Raw use of parameterized class 'LinkedHashSet'
         LinkedHashSet hs = new LinkedHashSet();
 
