@@ -47,7 +47,6 @@ public class P9_3_FinishingAndInterruptingThreads {
         try{
             Thread.sleep(10);
             t1.interrupt();
-            t1.join();
             Thread.sleep(50);
         }
         catch(InterruptedException e){
@@ -158,6 +157,7 @@ class MyThreadCloseableRunnable implements Runnable {
         System.out.printf("%s finished... \n", Thread.currentThread().getName());
     }
 }
+
 
 class ThreadInterruptAble extends Thread {
 
