@@ -6,7 +6,7 @@ public class P9_6_a2_Synchroniser_CountDownLatch {
     // Количество всадников
     private static final int RIDERS_COUNT = 5;
     // Объект синхронизации
-    private static CountDownLatch LATCH;
+    private static CountDownLatch latch;
     // Условная длина трассы
     private static final int TRACK_LENGTH = 3000;
 
@@ -24,11 +24,11 @@ public class P9_6_a2_Synchroniser_CountDownLatch {
             try {
                 System.out.printf("Всадник %d вышел к стартовой прямой\n", riderNumber);
                 //  Уменьшаем счетчик на 1
-                LATCH.countDown();
+                latch.countDown();
 
                 // Метод await блокирует поток до тех пор, пока счетчик
                 // CountDownLatch не обнулится
-                LATCH.await();
+                latch.await();
                 // Ожидание, пока всадник не преодолеет трассу
                 Thread.sleep(TRACK_LENGTH / riderSpeed * 10);
                 System.out.printf("Всадник %d финишировал\n", riderNumber);
@@ -42,7 +42,7 @@ public class P9_6_a2_Synchroniser_CountDownLatch {
 
     public static void main(String[] args) throws InterruptedException {
         // Определение объекта синхронизации
-        LATCH = new CountDownLatch(RIDERS_COUNT + 3);
+        latch = new CountDownLatch(RIDERS_COUNT + 3);
         // Создание потоков всадников
         for (int i = 1; i <= RIDERS_COUNT; i++) {
             new Thread(createRider(i)).start(); // new Rider(i, (int) (Math.random() * 10 + 5))).start();
@@ -50,18 +50,18 @@ public class P9_6_a2_Synchroniser_CountDownLatch {
         }
 
         // Проверка наличия всех всадников на старте
-        while (LATCH.getCount() > 3)
+        while (latch.getCount() > 3)
             Thread.sleep(100);
 
         Thread.sleep(1000);
         System.out.println("На старт!");
-        LATCH.countDown();  // Уменьшаем счетчик на 1
+        latch.countDown();  // Уменьшаем счетчик на 1
         Thread.sleep(1000);
         System.out.println("Внимание!");
-        LATCH.countDown(); // Уменьшаем счетчик на 1
+        latch.countDown(); // Уменьшаем счетчик на 1
         Thread.sleep(1000);
         System.out.println("Марш!");
-        LATCH.countDown(); // Уменьшаем счетчик на 1
+        latch.countDown(); // Уменьшаем счетчик на 1
 
         // Счетчик обнулен, и все ожидающие этого события потоки разблокированы
     }

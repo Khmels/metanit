@@ -4,11 +4,10 @@ import java.util.concurrent.Semaphore;
 public class P9_6_a1_Synchroniser_Semaphore {
     private static final int COUNT_CONTROL_PLACES = 5;
     private static final int COUNT_RIDERS = 7;
-    // Флаги мест контроля
+    // места контроля
     private static boolean[] CONTROL_PLACES = null;
-
     // Семафор
-    private static Semaphore SEMAPHORE = null;
+    private static Semaphore semaphore = null;
 
     public static class Rider implements Runnable {
         private int riderNum;
@@ -22,7 +21,7 @@ public class P9_6_a1_Synchroniser_Semaphore {
             System.out.printf("Всадник %d подошел к зоне контроля\n", riderNum);
             try {
                 // Запрос разрешения
-                SEMAPHORE.acquire();
+                semaphore.acquire();
 
                 System.out.printf("\tвсадник %d проверяет наличие свободного контроллера\n", riderNum);
 
@@ -50,7 +49,7 @@ public class P9_6_a1_Synchroniser_Semaphore {
                 }
 
                 // Освобождение ресурса
-                SEMAPHORE.release();
+                semaphore.release();
                 System.out.printf("\t\t-----Всадник %d завершил проверку\n", riderNum);
             } catch (InterruptedException e) {
             }
@@ -69,7 +68,7 @@ public class P9_6_a1_Synchroniser_Semaphore {
          *  - количество разрешений 5
          *  - флаг очередности fair=true, т.е. очередь first-in first-out
          */
-        SEMAPHORE = new Semaphore(COUNT_CONTROL_PLACES, true);
+        semaphore = new Semaphore(COUNT_CONTROL_PLACES, true);
 
         for (int i = 1; i <= COUNT_RIDERS; i++) {
             new Thread(new P9_6_a1_Synchroniser_Semaphore.Rider(i)).start();
