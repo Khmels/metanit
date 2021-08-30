@@ -7,7 +7,7 @@ public class P10_5_SubStreamAndCombining {
     public static void main(String[] args) {
         //Ряд методов Stream API возвращают подпотоки или объединенные потоки на основе уже имеющихся потоков.
 
-        //--- takeWhile
+        //--- takeWhile ------------------------------
 
         /*
         етод takeWhile() выбирает из потока элементы, пока они соответствуют условию.
@@ -32,7 +32,7 @@ public class P10_5_SubStreamAndCombining {
                 .forEach(n -> System.out.println(n));
         System.out.println("---------------------");
 
-        //--- dropWhile
+        //--- dropWhile ------------------------------
 
         /*
         Метод dropWhile() выполняет обратную задачу - он пропускает элементы потока,
@@ -49,7 +49,7 @@ public class P10_5_SubStreamAndCombining {
                 .forEach(n -> System.out.println(n));
         System.out.println("---------------------");
 
-        //--- concat
+        //--- concat ------------------------------
 
         /*
         Статический метод concat() объединяет элементы двух потоков, возвращая объединенный поток
@@ -61,7 +61,7 @@ public class P10_5_SubStreamAndCombining {
         Stream.concat(people1, people2).sorted().forEach(n -> System.out.println(n));
         System.out.println("---------------------");
 
-        //--- distinct
+        //--- distinct ------------------------------
 
         /*
         Метод distinct() возвращает только ункальные элементы в виде потока

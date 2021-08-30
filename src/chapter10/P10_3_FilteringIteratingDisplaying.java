@@ -34,10 +34,10 @@ public class P10_3_FilteringIteratingDisplaying {
 
         // фильтр набора телефонов по цене:
 
-        Stream<Phone> phoneStream = Stream.of
-                (new Phone("iPhone 12", 1000),
-                new Phone("Pixel 5", 900),
-                new Phone("Samsung Galaxy S21", 950));
+        Stream<Ch10_Phone> phoneStream = Stream.of
+                (new Ch10_Phone("iPhone 12", 1000),
+                new Ch10_Phone("Pixel 5", 900),
+                new Ch10_Phone("Samsung Galaxy S21", 950));
 
         phoneStream.filter(p->p.getPrice()<960).forEach(p->System.out.println(p.getName()));
         System.out.println("---------------------");
@@ -55,9 +55,9 @@ public class P10_3_FilteringIteratingDisplaying {
         И в результате возвращается новый поток с преобразованными объектами.
          */
 
-        Stream<Phone> phoneStream2 = Stream.of( new Phone("iPhone 12", 1000),
-                                                new Phone("Pixel 5", 900),
-                                                new Phone("Galaxy S21", 950));
+        Stream<Ch10_Phone> phoneStream2 = Stream.of( new Ch10_Phone("iPhone 12", 1000),
+                                                new Ch10_Phone("Pixel 5", 900),
+                                                new Ch10_Phone("Galaxy S21", 950));
 
 //        phoneStream2
 //                .map(p-> p.getName());               // помещает в новый поток только названия телефонов
@@ -84,9 +84,9 @@ public class P10_3_FilteringIteratingDisplaying {
 
         //То есть из одного объекта Phone нам надо получить два объекта с информацией, например, в виде строки.
 
-        Stream<Phone> phoneStream3 = Stream.of( new Phone("iPhone 12", 1000),
-                new Phone("Pixel 5", 900),
-                new Phone("Galaxy S21", 950));
+        Stream<Ch10_Phone> phoneStream3 = Stream.of( new Ch10_Phone("iPhone 12", 1000),
+                new Ch10_Phone("Pixel 5", 900),
+                new Ch10_Phone("Galaxy S21", 950));
 
         phoneStream3
                 .flatMap(p->Stream.of(
@@ -97,33 +97,7 @@ public class P10_3_FilteringIteratingDisplaying {
                 .forEach(s->System.out.println(s));
 
     }
-
 }
 
-class Phone{
 
-    private String name;
-    private int price;
-
-    public Phone(String name, int price){
-        this.name=name;
-        this.price=price;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-}
 
