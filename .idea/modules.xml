@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../demo/demo.iml" filepath="$PROJECT_DIR$/../demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/metanit.iml" filepath="$PROJECT_DIR$/metanit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../open/open.iml" filepath="$PROJECT_DIR$/../open/open.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../operations/operations.iml" filepath="$PROJECT_DIR$/../operations/operations.iml" />
     </modules>
   </component>
 </project>
