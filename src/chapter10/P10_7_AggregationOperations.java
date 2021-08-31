@@ -5,8 +5,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Optional;
 
-public class P10_7_ConversionOperations {
+public class P10_7_AggregationOperations {
     public static void main(String[] args) {
+
+        // Агрегация, или агрегирование (лат. aggregatio «присоединение») — процесс объединения элементов в одну систему
+        // Агрегирование осуществляется посредством суммирования, группировки или других способов сведения частных показателей в обобщенные
 
         //--- count ------------------------
 

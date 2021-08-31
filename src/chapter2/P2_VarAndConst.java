@@ -46,7 +46,7 @@ public class P2_VarAndConst {
         //Constants
         final int LIMIT = 5;
         System.out.println(LIMIT);  // 5
-        ////LIMIT=57; // так мы уже не можем написать, так как LIMIT - константа
+        ////LIMIT=57; // так уже не можем написать, так как LIMIT - константа
         //Cannot assign a value to final variable 'LIMIT'
 
     }
