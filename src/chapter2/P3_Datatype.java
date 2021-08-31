@@ -1,6 +1,6 @@
 package chapter2;
 
-import java.sql.SQLOutput;
+
 
 public class P3_Datatype {
     public static void main(String[] args) {
