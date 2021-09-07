@@ -4,6 +4,7 @@ public class SomeClass implements SomeInterface{
     String name;
     long id;
     String email;
+    public String publicInfo;
 
     public SomeClass(String name, long id, String email) {
         this.name = name;

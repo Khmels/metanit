@@ -3,6 +3,7 @@ package chapter13_Add_Reflection;
 import org.w3c.dom.ls.LSOutput;
 
 import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
 import java.util.Arrays;
@@ -136,10 +137,11 @@ public class Ch13_Reflection {
                     /// unchecked
                     /// Exception in thread "main" java.lang.IllegalArgumentException: wrong number of arguments
                     constructor.newInstance("constructor-arg1", 1234567890, "constructor-arg1");
-            myObject.toString();
+            System.out.println(myObject.toString());
         } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
             e.printStackTrace();
         }
+        System.out.println("---------------------");
 
         //IDEA: 'catch' branch identical to 'NoSuchMethodException' branch
 
@@ -160,13 +162,74 @@ public class Ch13_Reflection {
 
         for(Constructor<?> constructor: constructors){
             // получить типы параметров какого-то конструктора можно так:
+            // length 0 для конструктора без параметров (ничего не выводит)
             Class[] parameterTypes = constructor.getParameterTypes();
             for (Class cl:parameterTypes) {
                 System.out.println(cl.getName());
             }
         }
+        System.out.println("---------------------");
 
+        //--- Создание нового объекта
 
+        Constructor constructor = null;
+        try {
+            constructor = SomeClass.class.getConstructor();
+            SomeClass myObject = (SomeClass)
+                    constructor.newInstance();
+            System.out.println(myObject.toString());
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        //--- Поля ------------------------------------------------------------------------
+
+        /*
+        Используя рефлексию можно работать с полями — переменными-членами класса.
+        Java класс java.lang.reflect.Field: с помощью него в рантайме можно устанавливать значения и получать данные с полей.
+         */
+
+        Field[] fields = mClassObject.getFields();
+        // Каждый элемент массива содержит экземпляр public поля, объявленного в классе.
+
+        //Если известно имя поля, к которому необходимо получить доступ, достаточно:
+        //Field 'id' is not public - поэтому exception
+        Field field = null;
+        try {
+            field = mClassObject.getField("publicInfo");
+            // название поля
+            System.out.println(field.getName());
+            // тип поля
+            System.out.println(field.getType().getName());
+
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        // установка значения полю
+        try {
+            field = mClassObject.getField("publicInfo");
+            System.out.println(field);
+
+            SomeClass instance = new SomeClass();
+            SomeClass instance2 = new SomeClass();
+
+            instance.publicInfo = "defaultValue";
+
+            Object value = field.get(instance);
+
+            field.set(instance2, value);
+            System.out.println(instance2.publicInfo);
+
+            /*
+            Параметр instance, который передается в методы для получения и установки значения поля,
+            должен быть экземпляром класса, которому принадлежит само поле.
+             */
+        } catch (NoSuchFieldException | IllegalAccessException e) {
+            e.printStackTrace();
+        }
     }
 }
 
