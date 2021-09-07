@@ -1,6 +1,6 @@
 package chapter13_Add_Reflection;
 
-public class SomeClass {
+public class SomeClass implements SomeInterface{
     String name;
     long id;
     String email;
@@ -36,5 +36,20 @@ public class SomeClass {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "SomeClass{" +
+                "name='" + name + '\'' +
+                ", id=" + id +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    @Override
+    public String rename(String s) {
+        this.name = s;
+        return "Name is changed to : " + s;
     }
 }

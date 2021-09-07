@@ -2,15 +2,20 @@ package chapter13_Add_Reflection;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Modifier;
+import java.util.Arrays;
 
 public class Ch13_Reflection {
     public static void main(String[] args) {
 
-        //--- Работа с классами
+        //--- Работа с классами ------------------------------------------------------------------------
 
         // Raw use of parameterized class 'Class'
         Class mClassObject = SomeClass.class;
+
+        Class<SomeClass> mClassObjectIdent = SomeClass.class;
 
 
         try {
@@ -20,7 +25,7 @@ public class Ch13_Reflection {
             e.printStackTrace();
         }
 
-        //--- Получаем название класса
+        //--- Название класса ------------------------------------------------------------------------
         // getName() , который вернет полное имя класса с пакетом:
         String fullClassName = mClassObject.getName();
         System.out.println(fullClassName);
@@ -29,7 +34,7 @@ public class Ch13_Reflection {
         System.out.println(justClassName);
         System.out.println("---------------------");
 
-        //--- Работа с модификаторами доступа
+        //--- Модификаторы доступа ------------------------------------------------------------------------
         /*
         Модификаторы представляют собой ключевые слова public, static, private и т.д.
         Можно получить модификаторы с помощью метода getModifiers():
@@ -63,9 +68,106 @@ public class Ch13_Reflection {
         System.out.println("is synchronized? \t\t"+Modifier.isSynchronized(classModifiers));
         System.out.println("is transient? \t\t"+Modifier.isTransient(classModifiers));
         System.out.println("is volatile? \t\t"+Modifier.isVolatile(classModifiers));
+        System.out.println("---------------------");
+
+        //--- Информация о пакете ------------------------------------------------------------------------
+
+        Package packageInfo = mClassObject.getPackage();
+        System.out.println(packageInfo.getName());
+        System.out.println("---------------------");
+
+        /* также можно получить доступ к информации, указанной для данного пакета в Manifest файле внутри JAR файла.
+        этот пакет находится в пути к классам. Подробнее о Package читайте  оф. документации: java.lang.Package.
+         */
+
+        //--- Объект суперкласса ------------------------------------------------------------------------
+
+        Class superclass = mClassObject.getSuperclass();
+        System.out.println(superclass.getName());
+        System.out.println("---------------------");
+        // если нет наследования, то java.lang.Object
+
+        //--- Реализованные интерфейсы ------------------------------------------------------------------------
+
+        Class[] interfaces = mClassObject.getInterfaces();
+        for(Class cl: interfaces){
+            System.out.println(cl.getName());
+        }
+        System.out.println("---------------------");
+
+        /*
+        Класс может реализовать много интерфейсов. Поэтому возвращается массив объектов Class.
+        В Java Reflection API интерфейсы также представлены объектами Class
+
+        Метод вернул только интерфейсы, которые реализует указанный класс, а не его суперкласс
+         */
+
+        //--- Конструкторы ------------------------------------------------------------------------
+
+        //Raw use of parameterized class 'Constructor'
+//        Constructor [] constructors = mClassObject.getConstructors();   // SomeClass.class
+//        for(Constructor constructor: constructors){
+//            System.out.println(constructor.getName());
+//        }
+
+        Constructor<?> [] constructors = mClassObjectIdent.getConstructors();   // SomeClass.class
+        for(Constructor<?> constructor: constructors){
+            System.out.println(constructor.getName() + ", number of parameters " + constructor.getParameterCount() +  "; "
+                    + constructor.getModifiers() + "; ");
+            // Returns the name of this constructor, as a string.
+            // This is the binary name of the constructor's declaring class.
+        }
+        System.out.println("-----------");
+
+
+        //Если известны параметры конкретного конструктора, то массив можно не получать, а работать уже с известным.
+
+        /*
+        Если ошиблись с аргументом конструктора, то будет выброшено исключение NoSuchMethodException.
+        newInstance требует обработать исключения IllegalAccessException, InstantiationException, InvocationTargetException
+         */
+
+        try {
+            Constructor<?> constructor =
+                    mClassObjectIdent.getConstructor(String.class, long.class, String.class);
+
+                    // mClassObjectIdent.getConstructor(new Class[]{String.class, long.class, String.class});
+            SomeClass myObject = (SomeClass)
+                    /// unchecked
+                    /// Exception in thread "main" java.lang.IllegalArgumentException: wrong number of arguments
+                    constructor.newInstance("constructor-arg1", 1234567890, "constructor-arg1");
+            myObject.toString();
+        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        //IDEA: 'catch' branch identical to 'NoSuchMethodException' branch
+
+        /*
+        try{ ....
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+         */
+
+        //--- Параметры конструктора
+
+        for(Constructor<?> constructor: constructors){
+            // получить типы параметров какого-то конструктора можно так:
+            Class[] parameterTypes = constructor.getParameterTypes();
+            for (Class cl:parameterTypes) {
+                System.out.println(cl.getName());
+            }
+        }
+
+
     }
-
-
 }
 
 
