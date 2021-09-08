@@ -2,10 +2,7 @@ package chapter13_Add_Reflection;
 
 import org.w3c.dom.ls.LSOutput;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.*;
 import java.util.Arrays;
 
 public class Ch13_Reflection {
@@ -230,6 +227,132 @@ public class Ch13_Reflection {
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
+        System.out.println("---------------------");
+
+
+        //--- Методы ------------------------------------------------------------------------
+
+        int i=1;
+        Method[] methods = mClassObject.getMethods();
+        for (Method m: methods){
+            System.out.println(i + ".   " + m.getName() + "\t\t\t\t" + m.toString());
+            i++;
+        }
+        System.out.println("---------------------");
+
+         /*
+        не нужно получать массив со всеми методами, если известны точные типы параметров метода, который необходимо использовать.
+        Например, есть метод под названием «sayHello«, который принимает String в качестве параметра.
+         */
+        try {
+            Method method = mClassObject.getMethod("setName", String.class);
+            // если метод() без параметров, то нужно передать null в методе getMethod():
+            Method method1 = mClassObject.getMethod("getName", null);
+            System.out.println(method.toString());
+            System.out.println(method1.toString());
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        //--- Параметры метода и типы возвращаемых значений
+        try {
+            Method method = mClassObject.getMethod("setName", String.class);
+            System.out.println("method.toString() = " + method.toString());
+            Class<?>[] parameters =  method.getParameterTypes();
+            System.out.println("Arrays.toString(parameters) = " + Arrays.toString(parameters));
+
+            System.out.println("method.getParameterTypes().toString() = " + method.getParameterTypes().toString());
+            System.out.println("method.getReturnType().toString() = " + method.getReturnType().toString());
+            System.out.println("----------");
+            // если метод() без параметров, то нужно передать null в методе getMethod():
+            Method method1 = mClassObject.getMethod("getName", null);
+            // Call to 'toString()' on array
+            // IDEA: wrap with 'java.util.Arrays.toString()' expression
+            System.out.println(Arrays.toString(method1.getParameterTypes()));
+            System.out.println("returnType: " + method1.getReturnType().toString());
+            System.out.println(method1.toString());
+
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        // Вызов метода с помощью Java рефлексии
+
+        Method method = null;
+        try {
+            SomeClass objectToInvokeOn = new SomeClass();
+            method = mClassObject.getDeclaredMethod("setEmail", String.class);
+            method.invoke(objectToInvokeOn, "newEmail");
+            System.out.println("objectToInvokeOn.email = " + objectToInvokeOn.email);
+        } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException noSuchMethodException) {
+            noSuchMethodException.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        /*
+        objectToInvokeOn    имеет тип Object и является объектом, для которого вызвать метод.
+        parameterTypes      имеет тип Class[] и представляет собой параметры, которые метод принимает на вход.
+        params              имеет тип Object[] и представляет собой пераметры, которые переданы методы.
+         */
+
+        /*
+        Следует отметить: если метод() — статический, то вызов метода с помощью рефлексии можно переписать так:
+        method.invoke(null, params)
+         */
+
+        //--- Методы установки и получения значения  ---------------------------
+        printGettersOrSetters(mClassObject);
+
+    }
+
+    /*
+    Кроме обычных методов класса мы также можем работать с методам get и set с помощью рефлексии.
+    Получить эти методы можно несколькими способами: явно указать геттер или сеттер при работе
+    или обойти все доступные в классе методы и проверить их на то являются ли они методами get или set:
+
+    Чтобы определить геттер или сеттер нам нужно определить некоторые правила:
+
+    Геттер — метод, имя которого начинается на ‘get’. Он не принимает аргументы и обязательно возвращает какое-то значение.
+    Сеттер — метод, имя которого начинается на ‘set’. Он принимает 1 параметр.
+
+    Обычно сеттеры не возвращают значение, однако при опеределении метода к сеттеру возвращаемый параметр не учитывается.
+     */
+
+    public static void printGettersOrSetters(Class aClass){
+        Method[] methods = aClass.getMethods();
+
+        for(Method method : methods){
+            if(isGetter(method)) System.out.println("getter: " + method);
+        }
+        System.out.println();
+        for(Method method : methods){
+            if(isSetter(method)) System.out.println("setter: " + method);
+        }
+    }
+
+    public static boolean isGetter(Method method){
+        if (!method.getName().startsWith("get")) {
+            return false;
+        }
+        if (method.getParameterTypes().length != 0) {
+            return false;
+        }
+        if (void.class.equals(method.getReturnType())) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isSetter(Method method){
+        if (!method.getName().startsWith("set")) {
+            return false;
+        }
+        if (method.getParameterTypes().length != 1) {
+            return false;
+        }
+        return true;
     }
 }
 
