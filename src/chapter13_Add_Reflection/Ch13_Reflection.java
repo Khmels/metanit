@@ -278,7 +278,7 @@ public class Ch13_Reflection {
         }
         System.out.println("---------------------");
 
-        // Вызов метода с помощью Java рефлексии
+        //--- Вызов метода с помощью Java рефлексии
 
         Method method = null;
         try {
@@ -302,8 +302,82 @@ public class Ch13_Reflection {
         method.invoke(null, params)
          */
 
-        //--- Методы установки и получения значения  ---------------------------
+        //--- Методы установки и получения значения Get, Set ---------------------------
         printGettersOrSetters(mClassObject);
+        System.out.println("---------------------");
+
+        //--- Приватные поля и методы ------------------------------------------------------------------------
+
+        /*
+        Чтобы получить доступ к закрытому полю нужно будет использовать метод
+        Class.getDeclaredField(String name) или Class.getDeclaredFields() метод.
+
+        Методы Class.getField(String name) и Class.getFields() возвращают только public поля
+         */
+
+        SomeClass privateObject = new SomeClass("какое-то приватное значение");
+        //--- Доступ к приватным полям с помощью рефлексии
+        try {
+            Field privateStringField = SomeClass.class.getDeclaredField("mPrivateString");
+
+            System.out.println("privateStringField.getType().toString() = " + privateStringField.getType().toString());
+            privateStringField.setAccessible(true);
+            System.out.println("privateStringField.getName() = " + privateStringField.getName());
+            System.out.println("privateStringField.getModifiers() = " + privateStringField.getModifiers());
+            String fieldValue = (String) privateStringField.get(privateObject);
+            System.out.println("значение приватного поля = " + fieldValue);
+        }
+        catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        /*
+        метод getDeclaredField, который имеет доступ лишь к полям,
+        объявленным в конкретном классе и не имеет доступ к полям суперкласса.
+         */
+
+        /*
+        Field.setAccessible(true), который отключает проверку доступа для указанного поля.
+        Теперь можно работать с ним с помощью рефлексии, даже если у него был private, protected или default доступ.
+        Без использования рефлексии этот метод все также приватный и компилятор не позволит нам обратиться к нему.
+         */
+        System.out.println("---------------------");
+
+        //--- Доступ к приватным методам с помощью рефлексии
+
+        /*
+        Class.getMethod(String name, Class[] parameterTypes) и Class.getMethods() имеют доступ лишь к public методам.
+
+        Доступ к закрытым методам осуществляется с помощью методов
+        Class.getDeclaredMethod(String name, Class[] parameterTypes) или Class.getDeclaredMethods().
+         */
+
+        SomeClass privateObjectMethods = new SomeClass("Какое-то значение");
+
+        Method privateStringMethod = null;
+        try {
+            privateStringMethod = SomeClass.class.getDeclaredMethod("getPrivateString", null);
+            System.out.println("privateStringMethod.getParameterCount() = " + privateStringMethod.getParameterCount());
+            System.out.println("privateStringMethod.getReturnType().toString() = " + privateStringMethod.getReturnType().toString());
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        privateStringMethod.setAccessible(true);
+
+        String returnValue = null;
+        try {
+            //void method
+            returnValue = (String) privateStringMethod.invoke(privateObject, null);
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("значение, которое возвращает private метод = " + returnValue);
+
 
     }
 

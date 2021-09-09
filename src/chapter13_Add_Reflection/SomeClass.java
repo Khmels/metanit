@@ -5,11 +5,17 @@ public class SomeClass implements SomeInterface{
     long id;
     String email;
     public String publicInfo;
+    private String mPrivateString = null;
+
 
     public SomeClass(String name, long id, String email) {
         this.name = name;
         this.id = id;
         this.email = email;
+    }
+
+    public SomeClass(String privateString){
+        this.mPrivateString = privateString;
     }
 
     public SomeClass() {
@@ -52,5 +58,9 @@ public class SomeClass implements SomeInterface{
     public String rename(String s) {
         this.name = s;
         return "Name is changed to : " + s;
+    }
+
+    private String getPrivateString(){
+        return this.mPrivateString;
     }
 }
