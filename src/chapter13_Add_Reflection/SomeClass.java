@@ -1,11 +1,14 @@
 package chapter13_Add_Reflection;
 
+@Reflectable(name="reflectable",  value = "какие-то метаданные")
 public class SomeClass implements SomeInterface{
     String name;
     long id;
     String email;
     public String publicInfo;
     private String mPrivateString = null;
+    @Reflectable(name="reflectable",  value = "какие-то метаданные поля")
+    public String mField = null;
 
 
     public SomeClass(String name, long id, String email) {
@@ -60,7 +63,18 @@ public class SomeClass implements SomeInterface{
         return "Name is changed to : " + s;
     }
 
+
     private String getPrivateString(){
         return this.mPrivateString;
     }
+
+    @Reflectable(name="reflectable",  value = "какие-то метаданные метода")
+    public void sayHello(){
+        System.out.println("Hello, annotation");
+    }
+
+    public static void sayBye(
+            @Reflectable(name="reflectable", value="какие-то метаданные параметров") String param){
+    }
+
 }

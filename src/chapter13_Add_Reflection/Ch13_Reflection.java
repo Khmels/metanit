@@ -2,6 +2,7 @@ package chapter13_Add_Reflection;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.*;
 import java.util.Arrays;
 
@@ -377,6 +378,122 @@ public class Ch13_Reflection {
         }
 
         System.out.println("значение, которое возвращает private метод = " + returnValue);
+        System.out.println("---------------------");
+
+        //--- Аннотации ------------------------------------------------------------------------
+
+
+        /*
+        С помощью Java рефлексии мы можем обрабатывать аннотации в рантайме.
+        Аннотации также могут быть обработаны с помощью рефлексии.
+         */
+
+        /* помощью рефлексии можно работать с аннотациями класса, метода или поля в рантайме.
+        getAnnotations() для получения всех аннотаций класса в виде массива объектов Annotation.
+        Если же нам конкретная аннотация, то получить к ней доступ можно непосредственно
+         */
+
+        //--- Аннотации над классом
+
+        Annotation[] annotations = mClassObject.getAnnotations();
+
+        for (Annotation annotation : annotations) {
+            if(annotation instanceof Reflectable) {
+                Reflectable mAnnotation = (Reflectable) annotation;
+                System.out.println("Аннотация класса");
+                System.out.println("name: " + mAnnotation.name());
+                System.out.println("value: " + mAnnotation.value());
+            }
+            for (Annotation a:annotations){
+                System.out.println("a.annotationType().toString() = " + a.annotationType().toString());
+            }
+        }
+        System.out.println("-----------");
+
+
+        Annotation annotation = mClassObject.getAnnotation(Reflectable.class);
+        Reflectable mAnnotationCreated = (Reflectable) annotation;
+        System.out.println("name direct: " + mAnnotationCreated.name());
+        System.out.println("value direct: " + mAnnotationCreated.value());
+        System.out.println("---------------------");
+
+        //--- Аннотации на методах
+
+        /*
+        Аннотации на методах работают точно также, как и на примере выше, единственная разница в получении списка аннотаций.
+        Если выше мы использовали метод getAnnotations(), то для аннотаций на методах можно вызывать метод
+        getDeclaredAnnotations() — получение всех аннотаций с указанного метода.
+         */
+
+        try {
+            Method methodAnnotated =
+                    mClassObject.getMethod("sayHello", null);
+            Annotation[] annotationsForMethod = methodAnnotated.getDeclaredAnnotations();
+
+            for(Annotation an : annotationsForMethod) {
+                if(annotation instanceof Reflectable) {
+                    Reflectable mAnnotationMethod = (Reflectable) annotation;
+                    System.out.println("a.annotationType().toString() = " + an.annotationType().toString());
+                    System.out.println("name: " + mAnnotationMethod.name());
+                    System.out.println("value: " + mAnnotationMethod.value());
+                }
+            }
+
+            // явное получение
+            Reflectable reAnnotationMethod = methodAnnotated.getAnnotation(Reflectable.class);
+            System.out.println("reAnnotationMethod.name() = " + reAnnotationMethod.name());
+            System.out.println("reAnnotationMethod.value() = " + reAnnotationMethod.value());
+
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+        System.out.println("---------------------");
+
+        //--- Аннотации в параметрах метода
+
+        Method methodAnnotatedParams =
+                null;
+        try {
+            methodAnnotatedParams = mClassObject.getMethod("sayBye", new Class[]{String.class});
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        Annotation[][] paramAnnotations = methodAnnotatedParams.getParameterAnnotations();
+        Class[] paramTypes = methodAnnotatedParams.getParameterTypes();
+
+        int iP = 0;
+        for (Annotation[] annotationPar : paramAnnotations){
+            Class parameterType = paramTypes[iP++];
+
+            for (Annotation annotationMethodParam : annotations) {
+                if (annotationMethodParam instanceof Reflectable) {
+                    Reflectable mAnnotation = (Reflectable) annotation;
+                    System.out.println("param: " + parameterType.getName());
+                    System.out.println("name: " + mAnnotation.name());
+                    System.out.println("value: " + mAnnotation.value());
+                }
+            }
+        }
+        /*
+        двумерный массив аннотаций на методе:
+        внутренний массив каждого элемента является набором аннотаций для каждого параметра (аргумента метода).
+         */
+
+        System.out.println("---------------------");
+
+        //--- Аннотации на полях
+
+        try {
+            Field fieldAnnotated = mClassObject.getField("mField");
+            Annotation annotationOfField = fieldAnnotated.getAnnotation(Reflectable.class);
+            Reflectable reflectableFieldAnnotation = (Reflectable) annotationOfField;
+            System.out.println("reflectableFieldAnnotation.name() = " + reflectableFieldAnnotation.name());
+            System.out.println("reflectableFieldAnnotation.value() = " + reflectableFieldAnnotation.value());
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
 
 
     }
