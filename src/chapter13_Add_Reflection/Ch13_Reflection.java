@@ -493,8 +493,81 @@ public class Ch13_Reflection {
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         }
+        System.out.println("---------------------");
 
+        //--- Дженерики (Generics) ------------------------------------------------------------------------
 
+        /*
+        часто пишут, что вся информация про дженерики в Java стирается во время компиляции  и невозможно получить
+        ее во время выполнения (так называемое стирание типов). Это утверждение не совсем верно.
+        Возможность получить информацию о дженериках во время выполнения есть в нескольких случаях.
+
+        Как правило, дженерики в Java используются в следующих ситуациях:
+                При объявлении параметризованного класса или интерфейса.
+                Использование параметризованного класса.
+
+        Примером может послужить java.util.List интерфейс.
+        Вместо того, чтобы создать список объектов, можно параметризовать его, скажем с помощью String.
+
+        Во время выполнения программы посмотреть тип параметризированного java.util.List возможности нет,
+        но мы можем найти его в полях и методах, где он используется и параметризируется с помощью Java рефлексии.
+         */
+
+        //--- Информация о дженериках в рантайме
+
+        // Получить информацию о дженериках параметризированного списка можно,
+        // если работать не с самим списком, а с геттером - методом getList():
+
+        Method methodGenerics = null;
+        try {
+            methodGenerics = SomeClass.class.getMethod("getList", null);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        Type returnType = null;
+        if (methodGenerics != null) {
+            returnType = methodGenerics.getGenericReturnType();
+        }
+
+        if (returnType instanceof ParameterizedType) {
+            ParameterizedType type = (ParameterizedType) returnType;
+            Type[] typeArguments = type.getActualTypeArguments();
+            for (Type typeArgument : typeArguments) {
+                Class typeClass = (Class) typeArgument;
+                System.out.println("тип: " + typeClass);
+            }
+        }
+
+        // Если же есть поле, то получить информацию о типе в рантайме можно следующим образом:
+
+        Field fieldGeneric = null;
+        try {
+            fieldGeneric = SomeClass.class.getDeclaredField("simpleList");  // тк protected
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+
+        Type genericFieldType = null;
+        if (fieldGeneric != null) {
+            genericFieldType = fieldGeneric.getGenericType();
+        }
+
+        if (genericFieldType instanceof ParameterizedType) {
+            ParameterizedType pType = (ParameterizedType) genericFieldType;
+
+            Type[] fieldArgTypes = pType.getActualTypeArguments();
+
+            for (Type fieldArgType : fieldArgTypes){
+                Class fieldClass = (Class) fieldArgType;
+                System.out.println("тип поля: " + fieldClass);
+            }
+        }
+        /*
+        В коде выше мы определили, что тип поля — параметризированный (с помощью instanceof)
+        и по нему уже получили массив типов Type[], который содержит 1 элемент типа Class (он реализует интерфейс Type).
+        Поэтому каст (cast) к Class.
+         */
 
     }
 

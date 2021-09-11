@@ -1,5 +1,9 @@
 package chapter13_Add_Reflection;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Reflectable(name="reflectable",  value = "какие-то метаданные")
 public class SomeClass implements SomeInterface{
     String name;
@@ -9,6 +13,7 @@ public class SomeClass implements SomeInterface{
     private String mPrivateString = null;
     @Reflectable(name="reflectable",  value = "какие-то метаданные поля")
     public String mField = null;
+    protected List<String> simpleList = new ArrayList<String>(Arrays.asList("1", "2", "3"));
 
 
     public SomeClass(String name, long id, String email) {
@@ -75,6 +80,10 @@ public class SomeClass implements SomeInterface{
 
     public static void sayBye(
             @Reflectable(name="reflectable", value="какие-то метаданные параметров") String param){
+    }
+
+    public List<String> getList(){
+        return this.simpleList;
     }
 
 }
