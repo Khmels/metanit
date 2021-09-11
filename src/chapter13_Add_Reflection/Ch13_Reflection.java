@@ -568,7 +568,55 @@ public class Ch13_Reflection {
         и по нему уже получили массив типов Type[], который содержит 1 элемент типа Class (он реализует интерфейс Type).
         Поэтому каст (cast) к Class.
          */
+        System.out.println("---------------------");
 
+        //--- Массивы  ------------------------------------------------------------------------
+
+        /*
+        Получить информацию о массивах можно с помощью класса java.lang.reflect.Array
+         */
+
+        int[] simpleIntArray = (int[]) Array.newInstance(int.class, 2);
+
+        Array.set(simpleIntArray, 0, 100);
+        Array.set(simpleIntArray, 1, 200);
+
+        System.out.println("первый элемент массива = " + Array.get(simpleIntArray, 0));
+        System.out.println("второй элемент массива = " + Array.get(simpleIntArray, 1));
+
+        //--- объект типа Class для массива
+
+        try {
+            Class intArrayObject = Class.forName("[I");
+            System.out.println("intArrayObject.getName() = " + intArrayObject.getName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        /*  параметр: "[I":
+                JVM представляет тип int с помощью символа "I".
+                Символ «[» слева представляет собой класс массива int.
+            Это работает для всех примитивов.
+        */
+
+        // для объектов дело обстоит иначе
+        Class<?> stringArrayClassObject = null;
+        try {
+            stringArrayClassObject = Class.forName("[Ljava.lang.String;");
+            System.out.println("stringArrayClassObject.getName() = " + stringArrayClassObject.getName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        // Комбинация "[L" вначале и ";" представляет собой массив объектов определенного типа (тип описан между ними).
+
+        // Для удобства этого обычно пишут такие хелпер-методы:
+        System.out.println(getClass("long").toString());
+        System.out.println("-----------");
+
+        // тип массива
+        String[] stringArray = new String[2];
+        Class<?> arrayClass = stringArray.getClass();
+        Class<?> arrayComponentType = arrayClass.getComponentType();
+        System.out.println(arrayComponentType);
     }
 
     /*
@@ -617,6 +665,19 @@ public class Ch13_Reflection {
             return false;
         }
         return true;
+    }
+
+    public static Class getClass(String className){
+        if ("long".equals(className)) {
+            return long.class;
+        }
+        // вместо long можно подставить любой другой примитив
+        try {
+            return Class.forName(className);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 }
 
