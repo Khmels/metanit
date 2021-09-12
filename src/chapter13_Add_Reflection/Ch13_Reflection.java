@@ -570,7 +570,7 @@ public class Ch13_Reflection {
          */
         System.out.println("---------------------");
 
-        //--- Массивы  ------------------------------------------------------------------------
+        //--- Массивы ------------------------------------------------------------------------
 
         /*
         Получить информацию о массивах можно с помощью класса java.lang.reflect.Array
@@ -617,6 +617,44 @@ public class Ch13_Reflection {
         Class<?> arrayClass = stringArray.getClass();
         Class<?> arrayComponentType = arrayClass.getComponentType();
         System.out.println(arrayComponentType);
+
+        //--- Dynamic Proxies ------------------------------------------------------------------------
+        /*
+        Using Java Reflection you create dynamic implementations of interfaces at runtime.
+        You do so using the class java.lang.reflect.Proxy.
+
+        these dynamic interface implementations as dynamic proxies.
+        Dynamic proxies can be used for many different purposes,
+        e.g. database connection and transaction management,
+        dynamic mock objects for unit testing,
+        and other AOP-like method intercepting purposes.
+
+        Creating Proxies
+        You create dynamic proxies using the Proxy.newProxyInstance() method. The newProxyInstance() methods takes 3 parameters:
+            - The ClassLoader that is to "load" the dynamic proxy class.
+            - An array of interfaces to implement.
+            - An InvocationHandler to forward all methods calls on the proxy to.
+        Here is an example:
+        */
+
+        InvocationHandler handler = new MyInvocationHandler();
+        MyInterface proxy = (MyInterface) Proxy.newProxyInstance(
+                                    MyInterface.class.getClassLoader(),
+                                    new Class[] { MyInterface.class },
+                                    handler);
+        /*After running this code the proxy variable contains a dynamic implementation of the MyInterface interface.
+        All calls to the proxy will be forwarded to the handler implementation of the general InvocationHandler interface.
+         */
+
+        /*
+        Known Use Cases
+            Dynamic proxies are known to be used for at least the following purposes:
+
+            - Database Connection and Transaction Management
+            - Dynamic Mock Objects for Unit Testing
+            - Adaptation of DI Container to Custom Factory Interfaces
+            - AOP-like Method Interception
+         */
     }
 
     /*
