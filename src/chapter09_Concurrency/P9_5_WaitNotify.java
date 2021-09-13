@@ -1,4 +1,4 @@
-package chapter09_Multithreading;
+package chapter09_Concurrency;
 
 public class P9_5_WaitNotify {
 

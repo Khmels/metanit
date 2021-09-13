@@ -1,4 +1,4 @@
-package chapter09_Multithreading;
+package chapter09_Concurrency;
 
 import java.util.concurrent.Exchanger;
 

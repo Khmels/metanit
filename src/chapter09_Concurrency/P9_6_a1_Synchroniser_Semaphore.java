@@ -1,4 +1,4 @@
-package chapter09_Multithreading;
+package chapter09_Concurrency;
 import java.util.concurrent.Semaphore;
 
 public class P9_6_a1_Synchroniser_Semaphore {
